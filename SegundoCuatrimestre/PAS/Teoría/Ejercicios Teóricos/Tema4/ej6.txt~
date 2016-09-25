@@ -1,0 +1,13 @@
+Imagina la siguiente salida:
+pagutierrez@pagutierrez--TOSHIBA:~/tmp$ ls -la
+total 8
+-rw-rw-r-- 1 root
+profesores
+0 2012-03-19 18:30 prueba
+pagutierrez@pagutierrez--TOSHIBA:~/tmp$ newgrp profesores
+Contraseńa:
+pagutierrez@pagutierrez--TOSHIBA:~/tmp$
+¿Qué salida producirían los siguientes comandos?
+	1. chmod o+w prueba
+	2. echo "HOLA" >> prueba
+	3. cat prueba

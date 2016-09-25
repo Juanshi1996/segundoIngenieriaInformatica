@@ -1,0 +1,23 @@
+Su jefe necesita que exporte las carpetas /usr/ y /etc utilizando NFS. Se le proporciona la
+siguiente información y peticiones:
+	a) Debido a las políticas de la empresa, solo las personas de su Departamento (subred
+	   192.168.123.0/24) deberían ser capaces de utilizar las carpetas exportadas (en modo
+	   lectura/escritura). ¿Qué líneas debería añadir a qué ficheros para hacer esto posible?
+	b) ¿Qué debería hacer para que los cambios sean efectivos y los demonios mountd y nfsd
+	   estuvieran al tanto de las nuevas carpetas sin tener que reiniciar el servidor?
+	c) ¿Cómo podría hacer que, automáticamente, todas las máquinas tuvieran disponibles, al
+	   arrancar, estas dos carpetas en /mnt/usr y en /mnt/etc (suponga que el servidor tiene
+	   como IP 192.168.123.1)?
+
+
+
+	a)	Se abriría el fichero /etc/exports y se pondrían las líneas:
+		/usr/ 192.168.123.0/24 (rw)
+		/etc/ 192.168.123.0/24 (rw)
+
+	b)	Habría que ejecutar el comando exportfs con la opción -r con privilegios de administrador.
+		'exportfs -r'
+
+	c)	En el fichero /etc/fstab habría que añadir las líneas:
+		192.168.123.1:/usr	/mnt/usr	nfs 	defaults, hard	0	0
+		192.168.123.1:/etc  /mnt/etc    nfs 	defaults, hard 	0	0

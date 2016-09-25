@@ -1,0 +1,13 @@
+(deffacts animales
+	(mamifero roedor rata)
+	(mamifero roedor ardilla)
+	(mamifero felino tigre)
+	(mamifero felino lince)
+	(mamifero felino jaguar)
+	(reptil serpiente boa)
+	(reptil serpiente cobra)
+	(ave rapaz diurna halcon)
+	(ave rapaz diurna gavilan)
+	(ave rapaz nocturna buho)
+	(ave rapaz nocturna lechuza)
+)

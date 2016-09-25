@@ -1,0 +1,4 @@
+Ejercicio 9
+¿Para qué sirve el comando killall? ¿Qué señal envían por defecto los comandos kill y killall (número y nemónico)?
+
+Con el comando killall mandamos una señal a todos los procesos del sistema y por defecto se envia la señal SIGTERM (señal 15).

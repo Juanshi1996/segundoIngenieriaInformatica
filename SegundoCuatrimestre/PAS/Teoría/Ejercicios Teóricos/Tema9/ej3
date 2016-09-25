@@ -1,0 +1,2 @@
+¿Cuál es la diferencia entre las utilidades yppasswd y passwd?
+	Gracias a yppasswd se puede cambiar la contraseña del cliente en el servidor NIS y con passwd cambia la contraseña de su equipo.

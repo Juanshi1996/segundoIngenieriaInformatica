@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>Practica3ED: Fichero Fuente doublyLinkedSortedList.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Practica3ED
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="modules.html"><span>Módulos</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">doublyLinkedSortedList.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="doubly_linked_sorted_list_8hpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef DOUBLYLINKEDSORTEDLIST_HPP_</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define DOUBLYLINKEDSORTEDLIST_HPP_</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="sorted_list_8hpp.html">sortedList.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="node_8hpp.html">node.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceds.html">ds</a>{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classds_1_1_doubly_linked_sorted_list.html">   23</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classds_1_1_doubly_linked_sorted_list.html">DoublyLinkedSortedList</a> : <span class="keyword">public</span> <a class="code" href="classds_1_1_sorted_list.html">SortedList</a>&lt;T&gt;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classds_1_1_doubly_linked_sorted_list.html#ac5517baaf0faaf763506fe45c2af249a">   29</a></span>&#160;    <a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>* <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#ac5517baaf0faaf763506fe45c2af249a">head_</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classds_1_1_doubly_linked_sorted_list.html#a08fcad9b923e0136c32d52c49ebcd0a4">   33</a></span>&#160;    <a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>* <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a08fcad9b923e0136c32d52c49ebcd0a4">current_</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classds_1_1_doubly_linked_sorted_list.html#add68a5f9a3acb647b07b2dd8021e41f2">   42</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#add68a5f9a3acb647b07b2dd8021e41f2">goTo</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;pos) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a74e5dee039777b93094d68df7cbc33d7">setCurrent</a>(head_);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keywordflow">while</span>(i&lt;pos &amp;&amp; <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>() != NULL){</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a74e5dee039777b93094d68df7cbc33d7">setCurrent</a>(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>()-&gt;getNext());</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        i++;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classds_1_1_doubly_linked_sorted_list.html#af6ffbad458b837abc741fce251831b84">   59</a></span>&#160;    <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#af6ffbad458b837abc741fce251831b84">DoublyLinkedSortedList</a>(){</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      head_ = NULL;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      current_ = NULL;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classds_1_1_doubly_linked_sorted_list.html#abeabd986c1a02225a0bfb9acbb8fe390">   73</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>* <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#abeabd986c1a02225a0bfb9acbb8fe390">getHead</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#ac5517baaf0faaf763506fe45c2af249a">head_</a>; };</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">   80</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>* <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a08fcad9b923e0136c32d52c49ebcd0a4">current_</a>; };</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classds_1_1_doubly_linked_sorted_list.html#ac110f32dbd2fd9fb8c8ec626944a5e0c">   88</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#ac110f32dbd2fd9fb8c8ec626944a5e0c">isLast</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;pos){</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      assert(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a026bf819b3cc8b00a9254332ecb795e0">isValid</a>(pos));</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>* aux = <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#add68a5f9a3acb647b07b2dd8021e41f2">goTo</a>(pos);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      <span class="keywordtype">bool</span> last = (current_-&gt;<a class="code" href="classds_1_1_node.html#a059025fed55d44e207d2b72ceefa10e1">getNext</a>() == NULL);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a74e5dee039777b93094d68df7cbc33d7">setCurrent</a>(aux);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <span class="keywordflow">return</span> last;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classds_1_1_doubly_linked_sorted_list.html#a026bf819b3cc8b00a9254332ecb795e0">  103</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a026bf819b3cc8b00a9254332ecb795e0">isValid</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;pos) {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      <a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>* aux;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      <span class="keywordtype">bool</span> currentZero = 0;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      aux = <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#add68a5f9a3acb647b07b2dd8021e41f2">goTo</a>(pos);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>() != NULL){</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        currentZero = 1;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a74e5dee039777b93094d68df7cbc33d7">setCurrent</a>(aux);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      <span class="keywordflow">return</span> currentZero;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classds_1_1_doubly_linked_sorted_list.html#ade304264672745952163cd6f9dda73cf">  121</a></span>&#160;    T <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#ade304264672745952163cd6f9dda73cf">getItem</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;pos) {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      assert(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a026bf819b3cc8b00a9254332ecb795e0">isValid</a>(pos));</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      <a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>* aux;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      T data;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      aux = <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a74e5dee039777b93094d68df7cbc33d7">setCurrent</a>(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#abeabd986c1a02225a0bfb9acbb8fe390">getHead</a>());</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      <span class="keywordflow">while</span>(i&lt;pos){</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a74e5dee039777b93094d68df7cbc33d7">setCurrent</a>(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>()-&gt;getNext());</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        i++;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>() != NULL){</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        data = <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>()-&gt;getData();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a74e5dee039777b93094d68df7cbc33d7">setCurrent</a>(aux);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;      <span class="keywordflow">return</span> data;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="classds_1_1_doubly_linked_sorted_list.html#a788a18e4d651705a14fb3d5c4ee5c048">  146</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a788a18e4d651705a14fb3d5c4ee5c048">searchItem</a>(<span class="keyword">const</span> T &amp;item, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;from){</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      assert(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a026bf819b3cc8b00a9254332ecb795e0">isValid</a>(from));</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      <a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>* aux = <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;      <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      <span class="keywordtype">bool</span> found = 0;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#add68a5f9a3acb647b07b2dd8021e41f2">goTo</a>(from);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>()-&gt;getData() == item){</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        found = 1;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;      }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;      <span class="keywordflow">for</span>(i=from; <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>()-&gt;getNext() != NULL &amp;&amp; !found; i++){</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a74e5dee039777b93094d68df7cbc33d7">setCurrent</a>(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>()-&gt;getNext());</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>()-&gt;getData() == item){</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;          found = 1;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        }</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;      }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">      #ifndef NDEBUG</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      <span class="keywordflow">if</span>(found){</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        assert(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a026bf819b3cc8b00a9254332ecb795e0">isValid</a>(i));</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        assert(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#ade304264672745952163cd6f9dda73cf">getItem</a>(i) == item);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor">      #endif</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a74e5dee039777b93094d68df7cbc33d7">setCurrent</a>(aux);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      <span class="keywordflow">if</span>(found){</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">return</span> i;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    }</div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="classds_1_1_doubly_linked_sorted_list.html#a402734e1192fb006766e8fd7e3febe9a">  186</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a402734e1192fb006766e8fd7e3febe9a">setHead</a>(<a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>* head) { head_ = head; };</div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="classds_1_1_doubly_linked_sorted_list.html#a74e5dee039777b93094d68df7cbc33d7">  193</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a74e5dee039777b93094d68df7cbc33d7">setCurrent</a>(<a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>* current) { current_ = current;};</div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="classds_1_1_doubly_linked_sorted_list.html#a414e3372c65a99afee70a4647ee2ac4a">  201</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a414e3372c65a99afee70a4647ee2ac4a">insert</a>(<span class="keyword">const</span> T &amp;item){</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#abeabd986c1a02225a0bfb9acbb8fe390">getHead</a>() == NULL) <span class="comment">//NO NODES - EMPTY LIST</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;      {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>* newNode = <span class="keyword">new</span> <a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>(NULL, item, NULL);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a402734e1192fb006766e8fd7e3febe9a">setHead</a>(newNode);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;      }</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      <span class="keywordflow">else</span>{ <span class="comment">//+1 NODES IN THE LIST</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>* aux = <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>();</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>* ant = NULL;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>* newNode;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keywordtype">bool</span> found = 0;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a74e5dee039777b93094d68df7cbc33d7">setCurrent</a>(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#abeabd986c1a02225a0bfb9acbb8fe390">getHead</a>());</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>()-&gt;getData() &gt; item){ <span class="comment">//SE INSERTA DELANTE</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;          newNode = <span class="keyword">new</span> <a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>(NULL, item, <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#abeabd986c1a02225a0bfb9acbb8fe390">getHead</a>());</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;          <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#abeabd986c1a02225a0bfb9acbb8fe390">getHead</a>()-&gt;setPrevious(newNode);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;          <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a402734e1192fb006766e8fd7e3febe9a">setHead</a>(newNode);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keywordflow">else</span>{ <span class="comment">//INSERTING ORDERED</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;          <span class="keywordflow">while</span>(!found &amp;&amp; <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>() != NULL){</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>()-&gt;getData() &gt; item){</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;              found = 1;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;              ant = <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>();</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;              <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a74e5dee039777b93094d68df7cbc33d7">setCurrent</a>(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>()-&gt;getNext());</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            }</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;          }</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;          <span class="keywordflow">if</span>(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>() != NULL){ <span class="comment">//INSERTION IN HALF</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            newNode = <span class="keyword">new</span> <a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>()-&gt;getPrevious(), item, <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>());</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            (<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>()-&gt;getPrevious())-&gt;setNext(newNode);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>()-&gt;setPrevious(newNode);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;          }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;          <span class="keywordflow">else</span>{ <span class="comment">//INSERTION END</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            newNode = <span class="keyword">new</span> <a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>(ant, item, ant-&gt;<a class="code" href="classds_1_1_node.html#a059025fed55d44e207d2b72ceefa10e1">getNext</a>());</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            ant-&gt;<a class="code" href="classds_1_1_node.html#a71486af04c7673ac709f931b08cdd668">setNext</a>(newNode);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;          }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        }</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a74e5dee039777b93094d68df7cbc33d7">setCurrent</a>(aux);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;      }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="preprocessor">      #ifndef NDEBUG</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;      <span class="keywordtype">int</span> pos = <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a788a18e4d651705a14fb3d5c4ee5c048">searchItem</a>(item, 0);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a026bf819b3cc8b00a9254332ecb795e0">isValid</a>(pos-1)){</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        assert(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#ade304264672745952163cd6f9dda73cf">getItem</a>(pos-1) &lt;= item);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a026bf819b3cc8b00a9254332ecb795e0">isValid</a>(pos+1)){</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        assert(item &lt;= <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#ade304264672745952163cd6f9dda73cf">getItem</a>(pos+1));</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;      }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="preprocessor">      #endif</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    }</div>
+<div class="line"><a name="l00256"></a><span class="lineno"><a class="line" href="classds_1_1_doubly_linked_sorted_list.html#ad91585155cac9e4edf50eab154b3821e">  256</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#ad91585155cac9e4edf50eab154b3821e">deletePosition</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;pos){</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      assert(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#abeabd986c1a02225a0bfb9acbb8fe390">getHead</a>() != NULL);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;      assert(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a026bf819b3cc8b00a9254332ecb795e0">isValid</a>(pos) == 1);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="preprocessor">      #ifndef NDEBUG</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;      T oldItem;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      <span class="keywordtype">bool</span> oldIsValid = <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a026bf819b3cc8b00a9254332ecb795e0">isValid</a>(pos+1);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;      <span class="keywordflow">if</span>(oldIsValid){</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        oldItem = <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#ade304264672745952163cd6f9dda73cf">getItem</a>(pos+1);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;      }</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="preprocessor">      #endif</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;      <a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>* aux = <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>();</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#add68a5f9a3acb647b07b2dd8021e41f2">goTo</a>(pos);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>() == <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#abeabd986c1a02225a0bfb9acbb8fe390">getHead</a>())</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;      {</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>()-&gt;getNext() != NULL){ <span class="comment">//+1 NODE</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;          (<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>()-&gt;getNext())-&gt;setPrevious(NULL);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;          <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a402734e1192fb006766e8fd7e3febe9a">setHead</a>(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>()-&gt;getNext());</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        }</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;          <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a402734e1192fb006766e8fd7e3febe9a">setHead</a>(NULL);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        }</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;      }</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;      <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>()-&gt;getNext() != NULL){</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;          (<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>()-&gt;getPrevious())-&gt;setNext(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>()-&gt;getNext());</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;          (<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>()-&gt;getNext())-&gt;setPrevious(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>()-&gt;getPrevious());</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        }</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;          (<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>()-&gt;getPrevious())-&gt;setNext(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>()-&gt;getNext());</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        }</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;      }</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;      <span class="keyword">delete</span> <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">getCurrent</a>();</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;      <a class="code" href="classds_1_1_doubly_linked_sorted_list.html#a74e5dee039777b93094d68df7cbc33d7">setCurrent</a>(aux);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="preprocessor">      #ifndef NDEBUG</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      <span class="keywordflow">if</span>(oldIsValid){</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        assert(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html#ade304264672745952163cd6f9dda73cf">getItem</a>(pos) == oldItem);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;      }</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="preprocessor">      #endif</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  };</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;}</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classds_1_1_doubly_linked_sorted_list_html_ad91585155cac9e4edf50eab154b3821e"><div class="ttname"><a href="classds_1_1_doubly_linked_sorted_list.html#ad91585155cac9e4edf50eab154b3821e">ds::DoublyLinkedSortedList::deletePosition</a></div><div class="ttdeci">void deletePosition(const int &amp;pos)</div><div class="ttdoc">Delete the element in the position pos. </div><div class="ttdef"><b>Definition:</b> <a href="doubly_linked_sorted_list_8hpp_source.html#l00256">doublyLinkedSortedList.hpp:256</a></div></div>
+<div class="ttc" id="classds_1_1_doubly_linked_sorted_list_html_ade304264672745952163cd6f9dda73cf"><div class="ttname"><a href="classds_1_1_doubly_linked_sorted_list.html#ade304264672745952163cd6f9dda73cf">ds::DoublyLinkedSortedList::getItem</a></div><div class="ttdeci">T getItem(const int &amp;pos)</div><div class="ttdoc">Return the element in the position pos. </div><div class="ttdef"><b>Definition:</b> <a href="doubly_linked_sorted_list_8hpp_source.html#l00121">doublyLinkedSortedList.hpp:121</a></div></div>
+<div class="ttc" id="classds_1_1_node_html"><div class="ttname"><a href="classds_1_1_node.html">ds::Node</a></div><div class="ttdoc">Class defining a node of a list. </div><div class="ttdef"><b>Definition:</b> <a href="node_8hpp_source.html#l00017">node.hpp:17</a></div></div>
+<div class="ttc" id="classds_1_1_node_html_a71486af04c7673ac709f931b08cdd668"><div class="ttname"><a href="classds_1_1_node.html#a71486af04c7673ac709f931b08cdd668">ds::Node::setNext</a></div><div class="ttdeci">virtual void setNext(Node&lt; T &gt; *next)</div><div class="ttdoc">Sets next pointer. </div><div class="ttdef"><b>Definition:</b> <a href="node_8hpp_source.html#l00072">node.hpp:72</a></div></div>
+<div class="ttc" id="classds_1_1_node_html_a059025fed55d44e207d2b72ceefa10e1"><div class="ttname"><a href="classds_1_1_node.html#a059025fed55d44e207d2b72ceefa10e1">ds::Node::getNext</a></div><div class="ttdeci">virtual Node&lt; T &gt; * getNext()</div><div class="ttdoc">Return next element. </div><div class="ttdef"><b>Definition:</b> <a href="node_8hpp_source.html#l00049">node.hpp:49</a></div></div>
+<div class="ttc" id="classds_1_1_doubly_linked_sorted_list_html_add68a5f9a3acb647b07b2dd8021e41f2"><div class="ttname"><a href="classds_1_1_doubly_linked_sorted_list.html#add68a5f9a3acb647b07b2dd8021e41f2">ds::DoublyLinkedSortedList::goTo</a></div><div class="ttdeci">void goTo(const int &amp;pos)</div><div class="ttdoc">Sets the current pointer to the element in the position pos. </div><div class="ttdef"><b>Definition:</b> <a href="doubly_linked_sorted_list_8hpp_source.html#l00042">doublyLinkedSortedList.hpp:42</a></div></div>
+<div class="ttc" id="classds_1_1_doubly_linked_sorted_list_html_a31d21dbe3370a41942ec342629b53dc2"><div class="ttname"><a href="classds_1_1_doubly_linked_sorted_list.html#a31d21dbe3370a41942ec342629b53dc2">ds::DoublyLinkedSortedList::getCurrent</a></div><div class="ttdeci">Node&lt; T &gt; * getCurrent() const </div><div class="ttdoc">Return the current element of the list. </div><div class="ttdef"><b>Definition:</b> <a href="doubly_linked_sorted_list_8hpp_source.html#l00080">doublyLinkedSortedList.hpp:80</a></div></div>
+<div class="ttc" id="classds_1_1_doubly_linked_sorted_list_html_af6ffbad458b837abc741fce251831b84"><div class="ttname"><a href="classds_1_1_doubly_linked_sorted_list.html#af6ffbad458b837abc741fce251831b84">ds::DoublyLinkedSortedList::DoublyLinkedSortedList</a></div><div class="ttdeci">DoublyLinkedSortedList()</div><div class="ttdoc">Generates a list. </div><div class="ttdef"><b>Definition:</b> <a href="doubly_linked_sorted_list_8hpp_source.html#l00059">doublyLinkedSortedList.hpp:59</a></div></div>
+<div class="ttc" id="sorted_list_8hpp_html"><div class="ttname"><a href="sorted_list_8hpp.html">sortedList.hpp</a></div></div>
+<div class="ttc" id="classds_1_1_doubly_linked_sorted_list_html"><div class="ttname"><a href="classds_1_1_doubly_linked_sorted_list.html">ds::DoublyLinkedSortedList</a></div><div class="ttdoc">Class defining a doubly linked sorted list. </div><div class="ttdef"><b>Definition:</b> <a href="doubly_linked_sorted_list_8hpp_source.html#l00023">doublyLinkedSortedList.hpp:23</a></div></div>
+<div class="ttc" id="namespaceds_html"><div class="ttname"><a href="namespaceds.html">ds</a></div><div class="ttdoc">Namespace to the Data Structures subject. </div></div>
+<div class="ttc" id="classds_1_1_doubly_linked_sorted_list_html_a08fcad9b923e0136c32d52c49ebcd0a4"><div class="ttname"><a href="classds_1_1_doubly_linked_sorted_list.html#a08fcad9b923e0136c32d52c49ebcd0a4">ds::DoublyLinkedSortedList::current_</a></div><div class="ttdeci">Node&lt; T &gt; * current_</div><div class="ttdoc">Pointer to the current element of the list. </div><div class="ttdef"><b>Definition:</b> <a href="doubly_linked_sorted_list_8hpp_source.html#l00033">doublyLinkedSortedList.hpp:33</a></div></div>
+<div class="ttc" id="classds_1_1_doubly_linked_sorted_list_html_a402734e1192fb006766e8fd7e3febe9a"><div class="ttname"><a href="classds_1_1_doubly_linked_sorted_list.html#a402734e1192fb006766e8fd7e3febe9a">ds::DoublyLinkedSortedList::setHead</a></div><div class="ttdeci">void setHead(Node&lt; T &gt; *head)</div><div class="ttdoc">Sets the head of the list. </div><div class="ttdef"><b>Definition:</b> <a href="doubly_linked_sorted_list_8hpp_source.html#l00186">doublyLinkedSortedList.hpp:186</a></div></div>
+<div class="ttc" id="classds_1_1_doubly_linked_sorted_list_html_a788a18e4d651705a14fb3d5c4ee5c048"><div class="ttname"><a href="classds_1_1_doubly_linked_sorted_list.html#a788a18e4d651705a14fb3d5c4ee5c048">ds::DoublyLinkedSortedList::searchItem</a></div><div class="ttdeci">int searchItem(const T &amp;item, const int &amp;from)</div><div class="ttdoc">Return position of a element in the list. </div><div class="ttdef"><b>Definition:</b> <a href="doubly_linked_sorted_list_8hpp_source.html#l00146">doublyLinkedSortedList.hpp:146</a></div></div>
+<div class="ttc" id="classds_1_1_doubly_linked_sorted_list_html_a74e5dee039777b93094d68df7cbc33d7"><div class="ttname"><a href="classds_1_1_doubly_linked_sorted_list.html#a74e5dee039777b93094d68df7cbc33d7">ds::DoublyLinkedSortedList::setCurrent</a></div><div class="ttdeci">void setCurrent(Node&lt; T &gt; *current)</div><div class="ttdoc">Sets the current element of the list. </div><div class="ttdef"><b>Definition:</b> <a href="doubly_linked_sorted_list_8hpp_source.html#l00193">doublyLinkedSortedList.hpp:193</a></div></div>
+<div class="ttc" id="node_8hpp_html"><div class="ttname"><a href="node_8hpp.html">node.hpp</a></div></div>
+<div class="ttc" id="classds_1_1_doubly_linked_sorted_list_html_a414e3372c65a99afee70a4647ee2ac4a"><div class="ttname"><a href="classds_1_1_doubly_linked_sorted_list.html#a414e3372c65a99afee70a4647ee2ac4a">ds::DoublyLinkedSortedList::insert</a></div><div class="ttdeci">void insert(const T &amp;item)</div><div class="ttdoc">Insert a element in the list orderly. </div><div class="ttdef"><b>Definition:</b> <a href="doubly_linked_sorted_list_8hpp_source.html#l00201">doublyLinkedSortedList.hpp:201</a></div></div>
+<div class="ttc" id="classds_1_1_doubly_linked_sorted_list_html_ac110f32dbd2fd9fb8c8ec626944a5e0c"><div class="ttname"><a href="classds_1_1_doubly_linked_sorted_list.html#ac110f32dbd2fd9fb8c8ec626944a5e0c">ds::DoublyLinkedSortedList::isLast</a></div><div class="ttdeci">bool isLast(const int &amp;pos)</div><div class="ttdoc">Return true if the element in pos is the last element in the list. </div><div class="ttdef"><b>Definition:</b> <a href="doubly_linked_sorted_list_8hpp_source.html#l00088">doublyLinkedSortedList.hpp:88</a></div></div>
+<div class="ttc" id="classds_1_1_doubly_linked_sorted_list_html_a026bf819b3cc8b00a9254332ecb795e0"><div class="ttname"><a href="classds_1_1_doubly_linked_sorted_list.html#a026bf819b3cc8b00a9254332ecb795e0">ds::DoublyLinkedSortedList::isValid</a></div><div class="ttdeci">bool isValid(const int &amp;pos)</div><div class="ttdoc">Return true if the element in pos is valid. </div><div class="ttdef"><b>Definition:</b> <a href="doubly_linked_sorted_list_8hpp_source.html#l00103">doublyLinkedSortedList.hpp:103</a></div></div>
+<div class="ttc" id="classds_1_1_doubly_linked_sorted_list_html_abeabd986c1a02225a0bfb9acbb8fe390"><div class="ttname"><a href="classds_1_1_doubly_linked_sorted_list.html#abeabd986c1a02225a0bfb9acbb8fe390">ds::DoublyLinkedSortedList::getHead</a></div><div class="ttdeci">Node&lt; T &gt; * getHead() const </div><div class="ttdoc">Return the first element of the list. </div><div class="ttdef"><b>Definition:</b> <a href="doubly_linked_sorted_list_8hpp_source.html#l00073">doublyLinkedSortedList.hpp:73</a></div></div>
+<div class="ttc" id="classds_1_1_doubly_linked_sorted_list_html_ac5517baaf0faaf763506fe45c2af249a"><div class="ttname"><a href="classds_1_1_doubly_linked_sorted_list.html#ac5517baaf0faaf763506fe45c2af249a">ds::DoublyLinkedSortedList::head_</a></div><div class="ttdeci">Node&lt; T &gt; * head_</div><div class="ttdoc">Pointer to the head of the list. </div><div class="ttdef"><b>Definition:</b> <a href="doubly_linked_sorted_list_8hpp_source.html#l00029">doublyLinkedSortedList.hpp:29</a></div></div>
+<div class="ttc" id="classds_1_1_sorted_list_html"><div class="ttname"><a href="classds_1_1_sorted_list.html">ds::SortedList</a></div><div class="ttdef"><b>Definition:</b> <a href="sorted_list_8hpp_source.html#l00017">sortedList.hpp:17</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Domingo, 26 de Abril de 2015 20:23:37 para Practica3ED por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9.1
+</small></address>
+</body>
+</html>

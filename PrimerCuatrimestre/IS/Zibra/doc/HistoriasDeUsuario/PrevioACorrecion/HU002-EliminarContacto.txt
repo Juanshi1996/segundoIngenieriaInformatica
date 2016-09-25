@@ -1,0 +1,22 @@
+002                 Eliminar contacto                             (ANVERSO)
+__________________________________________________________________
+
+Como usuario quiero poder eliminar un contacto de la agenda,
+para dejar de almacenarlo.
+
+
+  Estimación:
+  Prioridad:                    Dependiente de:
+
+__________________________________________________________________
+
+//////////////////////////////////////////////////////////////////
+                                                                   (REVERSO)
+__________________________________________________________________
+
+# Quiero poder borrar un contacto buscandolo por apellido.
+# No debo poder borrar un contacto si este no existe en la agenda.
+# Cuando encuentre el contacto, debe de borrarse permanentemente de
+  la agenda.
+
+__________________________________________________________________

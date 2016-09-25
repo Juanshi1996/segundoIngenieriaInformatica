@@ -1,0 +1,13 @@
+Crea un fichero crontab que realice las siguientes copias de seguridad de /dev/sda1,
+regularmente, sobre el primer dispositivo de cinta:
+	a. Una copia de nivel 0 una vez al mes.
+	b. Una copia de nivel 2 una vez a la semana.
+	c. Una copia de nivel 5 cada día que no se haya producido ni una de nivel 0 ni una de nivel 2.
+En el peor escenario, ¿cuántos comandos de restauración tendrías que aplicar para recuperar un
+fichero del que se realizo copia con esta configuración?.
+
+	a) * *	1 * * dump 0 -u -f /dev/nst0 /dev/sda1
+	b) * *	* * 0   dump 2 -u -f /dev/nst0 /dev/sda1
+	c) * *  2-31 * 1-6 dump 2 -u -f /dev/nst0 /dev/sda1
+
+	restore -r -f /dev/nst0

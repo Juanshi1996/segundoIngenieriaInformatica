@@ -1,0 +1,12 @@
+¿Qué comando utilizarías para imprimir un fichero a la impresora por defecto desde la línea de
+comandos? ¿Este comando es exclusivo de CUPS? ¿Cómo harías para saber las impresoras que hay
+instaladas en un sistema CUPS?
+
+	Si no hay ninguna impresora por defecto, la pondríamos de este modo:
+		lpadmin -d [printer-name]
+	Para imprimir un fichero a la impresora por defecto en la línea de comandos:
+		lp fichero1
+	¿Comando exclusivo de CUPS?
+		Sí, el comando es exclusivo de CUPS.
+	Para saber las impresoras que hay instaladas en un sistema CUPS:
+		lpinfo -m

@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>Practica3ED: Fichero Fuente macros.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Practica3ED
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="modules.html"><span>Módulos</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">macros.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="macros_8hpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef MACROS_HPP</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define MACROS_HPP</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="macros_8hpp.html#a1e26748f72802cc32341cc3846db931f">   11</a></span>&#160;<span class="preprocessor">#define LUGAR(x,y)   printf(&quot;\033[%d;%dH&quot;,x,y) </span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="macros_8hpp.html#a79bf316fce01e63d76dddcdcbe72ab1c">   12</a></span>&#160;<span class="preprocessor">#define BORRAR       printf(&quot;\33[2J&quot;)   </span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="macros_8hpp.html#ab86c2fc65d2b4c5205910f548828dcb9">   13</a></span>&#160;<span class="preprocessor">#define PARPADEO     printf(&quot;%c[5m&quot;,27) </span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="macros_8hpp.html#af2815fb445b50124864e3f2f958fac24">   14</a></span>&#160;<span class="preprocessor">#define APAGA        printf(&quot;%c[0m&quot;,27) </span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="macros_8hpp.html#ac6cb5eae7b643f5d13c9d546e81dbcaf">   15</a></span>&#160;<span class="preprocessor">#define INVERSO      printf(&quot;%c[7m&quot;,27) </span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="macros_8hpp.html#a3ab8b4157fd29a2336c702b26a967bb9">   16</a></span>&#160;<span class="preprocessor">#define SUBRAYADO    printf(&quot;%c[4m&quot;,27) </span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="macros_8hpp.html#af7eea73aeb56d77e1d56471ab214f8e2">   17</a></span>&#160;<span class="preprocessor">#define INTENSIDAD   printf(&quot;%c[1m&quot;,27) </span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="macros_8hpp.html#ab702106cf3b3e96750b6845ded4e0299">   19</a></span>&#160;<span class="preprocessor">#define RESET &quot;\e[m&quot; </span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="macros_8hpp.html#acfbc006ea433ad708fdee3e82996e721">   21</a></span>&#160;<span class="preprocessor">#define GREEN &quot;\e[32m&quot;   </span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="macros_8hpp.html#a8d23feea868a983c8c2b661e1e16972f">   22</a></span>&#160;<span class="preprocessor">#define RED &quot;\e[31m&quot;     </span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="macros_8hpp.html#abf681265909adf3d3e8116c93c0ba179">   23</a></span>&#160;<span class="preprocessor">#define YELLOW &quot;\e[33m&quot;  </span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="macros_8hpp.html#a79d10e672abb49ad63eeaa8aaef57c38">   24</a></span>&#160;<span class="preprocessor">#define BLUE &quot;\e[34m&quot;    </span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="macros_8hpp.html#a87b537f5fa5c109d3c05c13d6b18f382">   25</a></span>&#160;<span class="preprocessor">#define WHITE &quot;\e[37m&quot;   </span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="macros_8hpp.html#a6f699060902f800f12aaae150f3a708e">   26</a></span>&#160;<span class="preprocessor">#define MAGENTA &quot;\e[35m&quot; </span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="macros_8hpp.html#a7b3b25cba33b07c303f3060fe41887f6">   27</a></span>&#160;<span class="preprocessor">#define BLACK &quot;\e[30m&quot;   </span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="macros_8hpp.html#a097b673ada180f43497d977088e43785">   29</a></span>&#160;<span class="preprocessor">#define ONGREEN &quot;\e[42m&quot;   </span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="macros_8hpp.html#a776ab7f13e0834a53f3a2e40e4f1454c">   30</a></span>&#160;<span class="preprocessor">#define ONRED &quot;\e[41m&quot;     </span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="macros_8hpp.html#aa5c1734688b603c13c5b1c252b47ad5d">   31</a></span>&#160;<span class="preprocessor">#define ONYELLOW &quot;\e[43m&quot;  </span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="macros_8hpp.html#aa5d9b691aa1da18cdbe4e3c9a2c96d32">   32</a></span>&#160;<span class="preprocessor">#define ONBLUE &quot;\e[44m&quot;    </span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="macros_8hpp.html#a79ae30b852de243cee48fcb8afc2eb4c">   33</a></span>&#160;<span class="preprocessor">#define ONWHITE &quot;\e[47m&quot;   </span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="macros_8hpp.html#a923841ed8478c5a5d41eba4e5c202c90">   34</a></span>&#160;<span class="preprocessor">#define ONMAGENTA &quot;\e[45m&quot; </span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="macros_8hpp.html#a78ab50607348711673d4c84c345073fd">   35</a></span>&#160;<span class="preprocessor">#define ONBLACK &quot;\e[40m&quot;   </span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Domingo, 26 de Abril de 2015 20:23:37 para Practica3ED por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9.1
+</small></address>
+</body>
+</html>

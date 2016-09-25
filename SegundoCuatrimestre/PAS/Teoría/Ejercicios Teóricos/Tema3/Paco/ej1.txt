@@ -1,0 +1,37 @@
+1. Diferencias entre el apagado y el reinicio de la máquina. Comentar un ejemplo de un 
+   script que tuviese que ejecutarse al parar y no al reiniciar la máquina.
+   		Al apagar o reiniciar la máquina, se ejecutan exactamente los mismos scripts, excepto el último.
+   		La orden de apagado, ejecuta un script HALT mientras que la de reinicio, uno REBOOT.
+
+   		Para hacer que un script se ejecutase al parar y no al reiniciar la máquina, deberíamos de introducir
+   		ese script en la carpeta correspondiente al nivel de ejecución de apagado (el 0 en la mayoría de los casos, si no se ha modificado). Este script debería de tener un nombre que sea alfabéticamente menor que el de HALT porque recordamos que los script se ejecutan en orden y si se pusiese con un nombre
+   		alfabéticamente mayor, no se ejecutaría puesto que ya estaría el equipo apagado.
+
+2. ¿Qué diferencias observas entre los niveles de tipo mono­usuario?.
+		Son niveles que tienen funcionalidades no cargadas como por ejemplo la de red.
+		Estos niveles se usan para mantenimiento o tareas administrativas, utilizan muy pocos recursos e invocan a menos demonios. Además, sólo monta el sistema de archivos raíz ('/')
+
+3. Indique que se activa antes en el nivel 2, el soporte ACPI o el soporte para el 
+   bluetooth.
+   		Se activaría antes el soporte para bluetooth (S25bluetooth) que el de ACPI (S99acpi-support)
+   		puesto que los soportes se activan en orden alfabético.
+
+4. Si ejecutamos las siguientes órdenes como administrador:
+   - echo "echo \"HOLA\$1\" > /tmp/p1" > /etc/rc2.d/S24prueba
+   - mv /etc/rc2.d/S24prueba /etc/rc2.d/S71prueba
+   - cp /etc/rc2.d/S71prueba /etc/rc4.d/K00prueba
+   - chmod u+x /etc/rc2.d/S71prueba /etc/rc4.d/K00prueba
+   - telinit 4
+   - telinit 2
+   Indique el contenido del fichero /tmp/p1
+   	a) después de ejecutar la orden “telinit 4”. 
+   		El contenido del fichero /tmp/p1 es: HOLA
+	Tras ejecutar la orden “telinit 2”:
+		b) antes de que se ejecute el script  S70dns-clean
+			El contenido del fichero /tmp/p1 es: nulo, no habría nada puesto que al iniciarse el proceso init, el mismo proceso init, borraría los ficheros temporales justo antes de habilitar el login de usuarios.
+		c) antes de que se ejecute el script S75sudo.
+			El contenido del fichero /tmp/p1 es: HOLA
+
+
+5. ¿Cómo eliminaría el servicio openvpn a todos los niveles?.
+	rm /etc/rc*/*openvpn

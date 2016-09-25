@@ -1,0 +1,21 @@
+003                 Buscar contacto                               (ANVERSO)
+__________________________________________________________________
+
+Como usuario quiero poder buscar un contacto en la agenda para
+poder ver sus datos.
+
+
+  Estimación:
+  Prioridad:                    Dependiente de:
+
+__________________________________________________________________
+
+//////////////////////////////////////////////////////////////////
+                                                                   (REVERSO)
+__________________________________________________________________
+
+# Quiero poder buscar un contacto buscandolo por apellido.
+# No debo poder buscar un contacto si este no existe en la agenda.
+# Se deben mostrar por pantalla todos los datos del contacto.
+
+__________________________________________________________________

@@ -1,0 +1,7 @@
+¿Qué debería hacer si un proceso consume demasiada CPU del sistema que está administrando?
+¿Qué comandos debería utilizar para pararlo temporalmente, reiniciarlo e investigar más sobre el
+mismo?
+	Antes de matarlos, deberíamos saber que están haciendo.
+	Si el proceso parece legítimo, deberíamos suspenderlo con STOP, aplicarle renice (poniéndole un número alto de prioridad para que en 		realidad tenga poca prioridad) y reanudarlo con CONT tras hablar con el dueño del proceso.
+	Con el proceso strace podemos observar qué es lo que está haciendo un proceso.
+	

@@ -1,0 +1,22 @@
+Ejercicio 7
+Comente el contenido del siguiente fichero:
+
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/bin/sh
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/bin/sh
+list:x:38:38:Mailing List Manager:/var/list:/bin/sh
+irc:x:38:39:ircd:/var/run/ircd:/bin/sh
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/bin/sh
+nobody:x:65534:65534:nobody:/nonexistent:/bin/sh
+libuuid:x:100:101::/var/lib/libuuid:/bin/sh
+syslog:x:101:103::/home/syslog:/bin/false
+saned:x:112:121::/home/saned:/bin/false
+pagutierrez:x:1000:1000:Pedro A. Gutiérrez,,,:/home/pagutierrez:/bin/bash
+
+¿Con que usuarios podría logearse en el sistema (el comando sudo su usuario tendría sentido)?
+	Se podría acceder con pagutierrez y con el usuario root.
+	Sí tendría sentido el comando sudo su usuario para poder loguearte en root con la contraseña de administrador (sin saber la contraseña root).
+¿Qué usuarios tienen una carpeta personal? ¿Detecta alguna inconsistencia?
+	root syslog, saned y pagutierrez.
+	Detectamos inconsistencia en que syslog y saned no deberían tenerla.

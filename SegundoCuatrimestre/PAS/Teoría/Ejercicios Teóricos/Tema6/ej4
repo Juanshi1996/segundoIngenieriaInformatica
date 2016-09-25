@@ -1,0 +1,2 @@
+¿Cómo sabría el número de bloques libres de la partición /dev/sda3?
+	ejecutamos el comando sudo tune2fs -l /dev/sda3 | grep "Free blocks"

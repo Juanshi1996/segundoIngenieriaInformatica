@@ -1,0 +1,88 @@
+#include "dis_Subject.hpp"
+#include <cstdlib>
+#include <vector>
+#include <iostream>
+#include "generarpersona.hpp"
+#include "persona.hpp"
+#include <string>
+
+int main(int argc, char const *argv[]) {
+  int option = 1;
+  bool isSubject = false;
+  dis::Subject subject;
+  while(option) {
+    std::cout << "\n(#)  ======================== Elija una opción del menú ==";
+    std::cout << "=======================";
+    std::cout << "\n(1)  Crear asignatura.";
+    std::cout << "\n(2)  Mostrar la lista de alumnos de la asignatura ";
+    std::cout << "ascendentemente.";
+    std::cout << "\n(3)  Mostrar la lista de alumnos de la asignatura ";
+    std::cout << "descendentemente.";
+    std::cout << "\n(4)  Mostrar ordenados ascendentemente los alumnos ";
+    std::cout << "comprendidos entre otros dos.";
+    std::cout << "\n(5)  Mostrar ordenados descendentemente los alumnos ";
+    std::cout << "comprendidos entre otros dos.";
+    std::cout << "\n(6)  Modificar los datos de un alumno.";
+    std::cout << "\n(0)  Salir del programa.\n";
+    std::cout << "(#)  =======================================================";
+    std::cout << "=====================\n";
+    do {
+    std::cout << "\n     Introduzca un número entero comprendido entre el 0 y ";
+    std::cout << "el 6: ";
+    std::cin >> option;
+    } while(option < 0 or option > 6);
+    if(option > 1 and !isSubject) {
+      std::cout << "\n     Por favor, introduzca antes una asignatura.\n";
+    } else {
+      switch(option) {
+        case 0: {
+          std::cout << "\n";
+          break;
+        }
+        case 1: {
+          int n;
+          char file[15];
+          std::cout << "\n     Introduzca el número de alumnos que tiene la ";
+          std::cout << "asignatura: ";
+          std::cin >> n;
+          while(n > 100 || n < 0) {
+            std::cout << "\n     El número de alumnos debe ser menor o igual ";
+            std::cout << "que 100, por favor introduzca un número válido: ";
+            std::cin >> n;
+          }
+          std::cout << "\n     Introduzca el nombre del fichero para generar ";
+          std::cout << "los alumnos: ";
+          std::cin >> file;
+          std::vector<edi::Persona> students = generarPersonas(file, n);
+          dis::Subject subject(students);
+          isSubject = true;
+          break;
+        }
+        case 2: {
+          subject.listUpwardlySorted();
+        }
+        case 3: {
+          subject.listDescendentSorted();
+        }
+        case 4: {
+          edi::Persona p, q;
+          std::cin >> p;
+          std::cin >> q;
+          subject.showUpwardlySortedbetweenTwoStudents(p, q);
+        }
+        case 5: {
+          edi::Persona p, q;
+          std::cin >> p;
+          std::cin >> q;
+          subject.showDescendentSortedbetweenTwoStudents(p, q);
+        }
+        case 6: {
+          edi::Persona p;
+          std::cin >> p;
+          subject.modifyStudent(p);
+        }
+      }
+    }
+  }
+  return(EXIT_SUCCESS);
+}

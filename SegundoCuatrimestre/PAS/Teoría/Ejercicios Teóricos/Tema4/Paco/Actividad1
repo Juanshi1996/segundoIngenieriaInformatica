@@ -1,0 +1,10 @@
+Prueba el siguiente comando:
+echo "ibase=16;obase=2;$(echo "HOLA3" | sha1sum | tr -d ' -' | tr '[a-z]' '[A-Z]')" | bc
+Explica que es lo qué está haciendo el comando. Comprueba como cambiar un solo bit de la cadena,
+hace que más de la mitad de los bits del resumen hayan cambiado.
+
+	echo "HOLA3" | sha1sum --> encripta "HOLA3" en Hexadecimal con el método sha1sum.
+	tr -d ' -' --------------> borra los espacios y guiones.
+	tr '[a-z]' '[A-Z]' ------> cambia las minúsculas a mayúsculas.
+	ibase=16;obase=2 --------> la base de entrada en hexadecimal la pasa a base de salida binaria.
+	bc ----------------------> hace análisis numérico de la cadena.

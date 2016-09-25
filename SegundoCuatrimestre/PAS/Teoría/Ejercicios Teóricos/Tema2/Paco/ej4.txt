@@ -1,0 +1,38 @@
+Ver salida del comando ls -l pag 33 pdf teoría2 y responder:
+
+El usuario jsanchezm, del grupo docentes, tiene acceso al presente directorio. Indicar,
+si los hay:
+
+1) Archivos de los que puede mostrar contenido.
+   controlar
+   borrador.txt
+   index.htm
+   revisar
+   mostrar
+2) Archivos que puede ejecutar como programa.
+   controlar
+   revisar
+3) Archivos en los que puede modificar contenido.
+   borrador.txt
+4) Subdirectorios en los que puede ingresar.
+   trabajos
+   netscape3
+   finanzas
+   redes
+   corporacion
+5) Subdirectorios en que puede crear/eliminar ficheros propios.
+   trabajos
+   netscape3
+   finanzas
+   redes
+   corporacion
+6) Subdirectorios en los que puede borrar archivos de otros.
+   trabajos
+   finanzas
+   redes
+7) Subdirectorios en los que puede entrar y ejecutar programas contenidos en ellos,
+   pero no ver nombres de archivos.
+   Ninguno
+8) Archivos que puede ejecutar como programa con permisos del usuario
+   pagutierrez
+   controlar

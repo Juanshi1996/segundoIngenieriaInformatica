@@ -1,0 +1,8 @@
+¿Cuál es la diferencia entre formatear (a bajo nivel) y particionar un disco? ¿Cuál es la diferencia
+entre formatear (a alto nivel) y particionar un disco? ¿Cuándo se crea el journal?
+	El formato a bajo nivel define la geometría del disco, el MBR, el tamaño de sector, etc.
+	Sin embargo, el formato a alto nivel es para darle formato al sistema de archivos, particiones, etc
+
+	Para más información: http://darkslayer9513.blogspot.com.es/2011/09/formateo-de-alto-y-bajo-nivel.html
+
+	El journal se crea en el formato a alto nivel

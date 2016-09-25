@@ -1,0 +1,7 @@
+Supón que tenemos la suerte (cada vez más habitual) de que el fabricante de una impresora nos ha
+proporcionado un fichero PPD denominado newprinter.ppd. ¿Para qué sirve ese fichero? ¿Qué
+labor administrativa está haciendo este comando “lpadmin -p prueba -E -v
+parallel:/dev/lp0 -m newprinter.ppd”?
+	El fichero PPD (newprinter.ppd) permite que CUPS sepa cómo manejar la impresora (opciones soportadas como el papel, bandejas, contraseñas...), lenguaje que entiende de forma nativa, el tipo de archivo final que necesita la impresora, el programa que lo convierte a nativo, etc.
+
+	Con lpadmin -p prueba -E -v se está creando una 'clase de impresora' habilitando la impresora y asignándole un URI.

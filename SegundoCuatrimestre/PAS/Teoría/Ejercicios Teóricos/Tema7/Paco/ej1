@@ -1,0 +1,2 @@
+¿Cuál es el propósito de compartir una impresora Linux utilizando SAMBA?
+	Básicamente samba permite a PCs que utilizan Linux, conectarse a carpetas compartidas en PCs con Windows y compartir carpetas como si de un sistema Windows se tratara. Gracias a SAMBA, en una red podemos tener PCs con Windows y PCs con Linux de forma que puedan intercambiar información en carpetas compartidas de la misma forma que se haría si todos los PCs fueran Windows.

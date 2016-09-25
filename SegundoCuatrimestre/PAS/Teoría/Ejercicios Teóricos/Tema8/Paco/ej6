@@ -1,0 +1,8 @@
+Supón que en una empresa la sensibilidad de los datos es muy alta y no hay restricciones de espacio
+en el dispositivo para hacer las copias. ¿Qué tipo de copia de seguridad crees que sería la más
+adecuada?. ¿Qué sistema instaurarías si el espacio fuese limitado? Suponiendo que la mayoría de
+los cambios en el disco se producen de lunes a viernes y que el domingo el sistema está ocioso,
+¿como organizarías las copias de seguridad en este segundo caso?.
+	En el primer caso, copia de seguridad completa.
+	Si hubiese espacio limitado, incremental.
+	Las copias se harían el domingo.

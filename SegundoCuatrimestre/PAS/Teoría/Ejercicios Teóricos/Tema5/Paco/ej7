@@ -1,0 +1,6 @@
+Relacione el UID de un fichero con el UID real de un proceso y el UID efectivo de un proceso.
+Comente al menos dos motivos por los que el UID de un proceso es necesario en un sistema
+GNU/Linux
+	EUID ⇒ identificador del usuario efectivo, si hay cambio de dominio se refleja aquí (permiso suid).
+	
+	Para ejecutar siempre un proceso como administrador.

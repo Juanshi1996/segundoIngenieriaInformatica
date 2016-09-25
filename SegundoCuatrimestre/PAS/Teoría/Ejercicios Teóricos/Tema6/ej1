@@ -1,0 +1,19 @@
+¿Con qué se corresponde la siguiente salida? ¿Cómo puede obtenerse en un sistema GNU/Linux?
+
+/dev/sda5 / ext4 rw 0 0
+/dev/sda6 /home ext4 rw 0 0
+proc /proc proc rw,noexec,nosuid,nodev 0 0
+
+¿Qué es la última partición? ¿Cómo podría indicar un dispositivo si solo conoce su UUID o su
+etiqueta?
+
+	La salida se corresponde con el fichero /etc/fstab
+	cat /etc/fstab
+
+	La última partición es una partición de sistemas de ficheros virtuales, con información sobre procesos, núcleo, módulos cargados, dispositivos...
+
+	Se indicaría de esta manera:
+		Conociendo el UUID:
+			UUID=<UUID>  <mount point>  <type>  <options>  <dump>  <pass>
+		Conociendo la etiqueta:
+			LABEL=<etiqueta>

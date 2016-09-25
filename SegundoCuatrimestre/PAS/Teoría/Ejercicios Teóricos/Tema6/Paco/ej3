@@ -1,0 +1,7 @@
+Establezca que los permisos por defecto para archivos sean 601 para la partición /dev/sda4 del
+ejercicio anterior. Suponiendo que la partición ya esté montada, ¿cómo haría efectivos los permisos
+de manera inmediata?
+
+	/dev/sda4 	/otrolinux		ext3		rw,auto,umask=176	0	2
+
+	haríamos efectivos los cambios mount -o remount /dev/sda4

@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>Practica3ED: Fichero Fuente node.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Practica3ED
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="modules.html"><span>Módulos</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">node.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="node_8hpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef NODE_HPP_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define NODE_HPP_</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceds.html">ds</a>{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classds_1_1_node.html">   17</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classds_1_1_node.html">Node</a>{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classds_1_1_node.html#a0013f2a67c323e2738a278850eecc370">   23</a></span>&#160;    <a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>* <a class="code" href="classds_1_1_node.html#a0013f2a67c323e2738a278850eecc370">previous_</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classds_1_1_node.html#ac1fa9aaef68ee5f8e78392fcdb9f13d4">   27</a></span>&#160;    T <a class="code" href="classds_1_1_node.html#ac1fa9aaef68ee5f8e78392fcdb9f13d4">data_</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classds_1_1_node.html#a99c78bbc7b8ce45bd5ecc863bffe1d92">   31</a></span>&#160;    <a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>* <a class="code" href="classds_1_1_node.html#a99c78bbc7b8ce45bd5ecc863bffe1d92">next_</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classds_1_1_node.html#aa5c00046352ebf5d2f30e842cf7163a2">   42</a></span>&#160;    <span class="keyword">virtual</span> <span class="keyword">inline</span> <a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>* <a class="code" href="classds_1_1_node.html#aa5c00046352ebf5d2f30e842cf7163a2">getPrevious</a>() { <span class="keywordflow">return</span> <a class="code" href="classds_1_1_node.html#a0013f2a67c323e2738a278850eecc370">previous_</a>; };</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classds_1_1_node.html#a059025fed55d44e207d2b72ceefa10e1">   49</a></span>&#160;    <span class="keyword">virtual</span> <span class="keyword">inline</span> <a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>* <a class="code" href="classds_1_1_node.html#a059025fed55d44e207d2b72ceefa10e1">getNext</a>() { <span class="keywordflow">return</span> <a class="code" href="classds_1_1_node.html#a99c78bbc7b8ce45bd5ecc863bffe1d92">next_</a>; };</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classds_1_1_node.html#aed5cb7374366401bedce51b5051d1741">   56</a></span>&#160;    <span class="keyword">virtual</span> <span class="keyword">inline</span> <span class="keyword">const</span> T <a class="code" href="classds_1_1_node.html#aed5cb7374366401bedce51b5051d1741">getData</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classds_1_1_node.html#ac1fa9aaef68ee5f8e78392fcdb9f13d4">data_</a>; };</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classds_1_1_node.html#a2840182159ec51e0ca5afdcd08490675">   66</a></span>&#160;    <span class="keyword">virtual</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classds_1_1_node.html#a2840182159ec51e0ca5afdcd08490675">setPrevious</a>(<a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>* previous) { previous_ = previous; };</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classds_1_1_node.html#a71486af04c7673ac709f931b08cdd668">   72</a></span>&#160;    <span class="keyword">virtual</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classds_1_1_node.html#a71486af04c7673ac709f931b08cdd668">setNext</a>(<a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>* next) { next_ = next; };</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classds_1_1_node.html#a3736885dec7cf6e9ecaf7db5e578ca67">   78</a></span>&#160;    <span class="keyword">virtual</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classds_1_1_node.html#a3736885dec7cf6e9ecaf7db5e578ca67">setData</a>(<span class="keyword">const</span> T &amp;data) { data_ = data; };</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="classds_1_1_node.html">Node</a>(<a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>* previous, <span class="keyword">const</span> T data, <a class="code" href="classds_1_1_node.html">Node&lt;T&gt;</a>* next) : previous_(previous),</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    data_(data), next_(next) {};</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">virtual</span> ~Node(){};</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  };</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classds_1_1_node_html_ac1fa9aaef68ee5f8e78392fcdb9f13d4"><div class="ttname"><a href="classds_1_1_node.html#ac1fa9aaef68ee5f8e78392fcdb9f13d4">ds::Node::data_</a></div><div class="ttdeci">T data_</div><div class="ttdoc">Data that contain the node. </div><div class="ttdef"><b>Definition:</b> <a href="node_8hpp_source.html#l00027">node.hpp:27</a></div></div>
+<div class="ttc" id="classds_1_1_node_html_aa5c00046352ebf5d2f30e842cf7163a2"><div class="ttname"><a href="classds_1_1_node.html#aa5c00046352ebf5d2f30e842cf7163a2">ds::Node::getPrevious</a></div><div class="ttdeci">virtual Node&lt; T &gt; * getPrevious()</div><div class="ttdoc">Return previous element. </div><div class="ttdef"><b>Definition:</b> <a href="node_8hpp_source.html#l00042">node.hpp:42</a></div></div>
+<div class="ttc" id="classds_1_1_node_html"><div class="ttname"><a href="classds_1_1_node.html">ds::Node</a></div><div class="ttdoc">Class defining a node of a list. </div><div class="ttdef"><b>Definition:</b> <a href="node_8hpp_source.html#l00017">node.hpp:17</a></div></div>
+<div class="ttc" id="classds_1_1_node_html_a71486af04c7673ac709f931b08cdd668"><div class="ttname"><a href="classds_1_1_node.html#a71486af04c7673ac709f931b08cdd668">ds::Node::setNext</a></div><div class="ttdeci">virtual void setNext(Node&lt; T &gt; *next)</div><div class="ttdoc">Sets next pointer. </div><div class="ttdef"><b>Definition:</b> <a href="node_8hpp_source.html#l00072">node.hpp:72</a></div></div>
+<div class="ttc" id="classds_1_1_node_html_a059025fed55d44e207d2b72ceefa10e1"><div class="ttname"><a href="classds_1_1_node.html#a059025fed55d44e207d2b72ceefa10e1">ds::Node::getNext</a></div><div class="ttdeci">virtual Node&lt; T &gt; * getNext()</div><div class="ttdoc">Return next element. </div><div class="ttdef"><b>Definition:</b> <a href="node_8hpp_source.html#l00049">node.hpp:49</a></div></div>
+<div class="ttc" id="classds_1_1_node_html_a3736885dec7cf6e9ecaf7db5e578ca67"><div class="ttname"><a href="classds_1_1_node.html#a3736885dec7cf6e9ecaf7db5e578ca67">ds::Node::setData</a></div><div class="ttdeci">virtual void setData(const T &amp;data)</div><div class="ttdoc">Sets data of the node. </div><div class="ttdef"><b>Definition:</b> <a href="node_8hpp_source.html#l00078">node.hpp:78</a></div></div>
+<div class="ttc" id="classds_1_1_node_html_a0013f2a67c323e2738a278850eecc370"><div class="ttname"><a href="classds_1_1_node.html#a0013f2a67c323e2738a278850eecc370">ds::Node::previous_</a></div><div class="ttdeci">Node&lt; T &gt; * previous_</div><div class="ttdoc">Pointer to the previous element. </div><div class="ttdef"><b>Definition:</b> <a href="node_8hpp_source.html#l00023">node.hpp:23</a></div></div>
+<div class="ttc" id="classds_1_1_node_html_a99c78bbc7b8ce45bd5ecc863bffe1d92"><div class="ttname"><a href="classds_1_1_node.html#a99c78bbc7b8ce45bd5ecc863bffe1d92">ds::Node::next_</a></div><div class="ttdeci">Node&lt; T &gt; * next_</div><div class="ttdoc">Pointer to the next element. </div><div class="ttdef"><b>Definition:</b> <a href="node_8hpp_source.html#l00031">node.hpp:31</a></div></div>
+<div class="ttc" id="namespaceds_html"><div class="ttname"><a href="namespaceds.html">ds</a></div><div class="ttdoc">Namespace to the Data Structures subject. </div></div>
+<div class="ttc" id="classds_1_1_node_html_aed5cb7374366401bedce51b5051d1741"><div class="ttname"><a href="classds_1_1_node.html#aed5cb7374366401bedce51b5051d1741">ds::Node::getData</a></div><div class="ttdeci">virtual const T getData() const </div><div class="ttdoc">Return data of the node. </div><div class="ttdef"><b>Definition:</b> <a href="node_8hpp_source.html#l00056">node.hpp:56</a></div></div>
+<div class="ttc" id="classds_1_1_node_html_a2840182159ec51e0ca5afdcd08490675"><div class="ttname"><a href="classds_1_1_node.html#a2840182159ec51e0ca5afdcd08490675">ds::Node::setPrevious</a></div><div class="ttdeci">virtual void setPrevious(Node&lt; T &gt; *previous)</div><div class="ttdoc">Sets previous pointer. </div><div class="ttdef"><b>Definition:</b> <a href="node_8hpp_source.html#l00066">node.hpp:66</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Domingo, 26 de Abril de 2015 20:23:37 para Practica3ED por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9.1
+</small></address>
+</body>
+</html>

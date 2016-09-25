@@ -1,0 +1,15 @@
+Suponiendo el siguiente contenido para el fichero /etc/fstab
+
+LABEL=/		/				ext3		defaults,usrquota 	0	1
+/dev/sda3 	/windows		vfat		defaults			0	0
+/dev/dvd	/media/dvd		iso9660 	noauto,owner,ro		0	0
+/dev/fd0	/media/floppy 	vfat		noauto,uid=500		0	0
+/dev/sda4 	/otrolinux		ext3		rw,auto				0	2
+/dev/sda2 	swap			swap		defaults			0	0
+
+¿Qué puntos de montaje tendría algún contenido tras iniciar el sistema?
+	/
+	/windows
+	/otrolinux		Esto es así porque en <options> tienen auto o defaults, que los inicia
+	/swap
+

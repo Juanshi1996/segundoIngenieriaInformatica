@@ -1,0 +1,4 @@
+Explique qué es el protocolo RPC y cuál es su relación con NFS y NIS.
+	El protocolo RPC es un protocolo de llamadas al servidor cuando se piden archivos remotos.
+
+	NFS y NIS tienen un demonio llamado portmap que facilita la conexión entre el cliente y el servidor mediante la llamada a RPC.

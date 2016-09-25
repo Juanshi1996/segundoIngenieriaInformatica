@@ -1,0 +1,7 @@
+¿Qué diferencia existe entre hibernar un equipo y suspender un equipo? ¿En qué sentido influye en
+la memoria del sistema?
+	- Al hibernar el equipo, los datos almacenados en memoria RAM pasan a memoria secundaria (debe haber suficiente espacio de paginación)
+	- Al suspender el equipo, los datos siguen en memoria RAM.
+	
+	Si no hubiese suficiente memoria espacio en memoria secundaria, no se podría hibernar.
+	En la hibernación, se vacía la memoria RAM y al suspender no.

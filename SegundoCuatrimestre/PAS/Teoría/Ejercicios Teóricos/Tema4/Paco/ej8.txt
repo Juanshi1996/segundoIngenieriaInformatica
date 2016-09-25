@@ -1,0 +1,6 @@
+Explique porque no produce ninguna salida el siguiente listado:
+pedroa@pagutierrezLaptop:~$ ls /etc/skel/
+pedroa@pagutierrezLaptop:~$
+¿Que ficheros hubiese esperado obtener?
+	No se produce ninguna salida porque no hay ningún fichero no oculto.
+	Hubiese esperado obtener los ficheros que se copian automáticamente a cada $HOME de los usuarios.

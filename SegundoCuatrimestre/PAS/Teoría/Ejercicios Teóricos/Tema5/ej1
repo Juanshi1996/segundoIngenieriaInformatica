@@ -1,0 +1,4 @@
+Ejercicio 1¿Cómo podríamos listar el PID de todos los procesos en ejecución utilizando ls?
+
+Con el comando ls /proc | grep [0-1]
+Ya que en la carpeta /proc se encuentran las carpetas con los pid de los procesos.

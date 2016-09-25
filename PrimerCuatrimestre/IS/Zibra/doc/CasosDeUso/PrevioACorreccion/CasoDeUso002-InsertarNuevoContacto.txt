@@ -1,0 +1,18 @@
+ID: 002
+Breve descripción:
+  El Usuario inserta un nuevo Cliente en la agenda.
+Actores principales:
+  Usuario.
+Actores secundarios:
+  Cliente.
+Precondiciones:
+  1. Los datos deben cumplir un formato normalizado.
+Flujo principal:
+  1. El caso de uso empieza cuando el Usuario selecciona la acción de insertar un nuevo Cliente.
+  2. El sistema solicita introducir los datos del Cliente.
+    2.1. El Usuario inserta los datos solicitados al Cliente.
+  3. El sistema guarda en memoria los datos introducidos.
+Postcondiciones:
+  1. El Cliente no exista en la agenda.
+Flujos alternativos:
+  1. Al introducir un dato inválido, el sistema envía una alerta.

@@ -1,0 +1,24 @@
+006                Cargar copia de seguridad                      (ANVERSO)
+__________________________________________________________________
+
+Como usuario quiero poder cargar una copia de seguridad de los
+datos de la agenda para poder acceder a esos datos en caso de
+que los necesitase.
+
+
+  Estimación:
+  Prioridad:                    Dependiente de:
+
+__________________________________________________________________
+
+//////////////////////////////////////////////////////////////////
+                                                                   (REVERSO)
+__________________________________________________________________
+
+# Se debe dar un aviso al usuario si no existe una copia de seguridad
+  y este ha pedido cargarla.
+# Quiero poder cargar una copia de seguridad cuando lo necesite.
+# Cuando termine de rellenar el formulario debe registrarse el contacto
+  en la agenda.
+
+__________________________________________________________________

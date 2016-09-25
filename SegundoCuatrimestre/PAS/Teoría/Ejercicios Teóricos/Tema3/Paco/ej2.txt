@@ -1,0 +1,5 @@
+¿Qué sucedería si el sector MBR de un disco duro queda dañado (por ejemplo, en una caída)?
+¿Cómo podríamos repararlo?
+
+Al haber quedado dañado, podrías entrar con un LiveCD, abrir una terminal y hacer sudo grub-install /dev/sda,
+cambiando /dev/sda por la partición en la que deba instalarse

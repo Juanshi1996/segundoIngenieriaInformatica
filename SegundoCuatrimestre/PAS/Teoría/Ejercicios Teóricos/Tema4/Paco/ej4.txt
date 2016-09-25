@@ -1,0 +1,4 @@
+¿Qué significa la entrada “..” en cualquier carpeta? ¿Qué significa si estamos en “/”?
+La entrada ".." es una referencia a la carpeta padre de la carpeta en la que nos encontremos y la entrada
+"." es una referencia a la misma carpeta en la que nos encontramos.
+Para el directorio "/", ambas son una referencia a la misma carpeta ("/")

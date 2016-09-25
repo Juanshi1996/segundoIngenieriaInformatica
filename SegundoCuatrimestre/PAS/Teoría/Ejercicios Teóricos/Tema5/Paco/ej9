@@ -1,0 +1,4 @@
+¿Para qué sirve el comando killall? ¿Qué señal envían por defecto los comandos kill y
+killall (número y nemónico)?
+	killall mata a todos los procesos con un mismo nombre.
+	Los comandos kill y killall mandan por defecto la señal SIGNTERM (15)

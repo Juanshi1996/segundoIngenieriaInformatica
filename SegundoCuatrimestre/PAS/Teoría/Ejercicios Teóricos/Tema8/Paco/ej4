@@ -1,0 +1,7 @@
+Realiza una copia de seguridad de tu directorio $HOME en la carpeta /var/tmp utilizando el
+comando tar. Comprime el fichero con el algoritmo gzip. Haz un fichero que, al descomprimirlo,
+genere la misma estructura de directorios original. ¿Qué opción utilizarías para extraerlo
+preservando los permisos?.
+	tar -czPf /var/tmp/HOME.tgz $HOME
+
+	Lo descomprimiríamos con la opción '-p'

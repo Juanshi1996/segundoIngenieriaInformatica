@@ -1,0 +1,5 @@
+Proporciona un comando que realizase una copia de seguridad de su directorio home (nivel 0) en el
+primer dispositivo de cinta conectado al sistema. Elije el comportamiento más adecuado (rewinding
+o non-rewinding).
+	dump 0 -u -f /dev/st0 /home --> rewinding
+	dump 0 -u -f /dev/nst0 /home --> non-rewinding

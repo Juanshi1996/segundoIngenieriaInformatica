@@ -1,0 +1,15 @@
+Explique los pasos necesarios para compartir una impresora en CUPS.
+	Editar el fichero cups.conf para que acepte trabajos desde la red
+		<Location/>
+		Order Deny, Allow
+		DenyFromAll
+		Allow From 127.0.0.1
+		Allow From IP
+		</Location>
+
+	Decimos a CUPS que publique en broadcast las impresoras disponibles.
+		Browsing On
+		BrowseOrder allow , deny
+		BrowseAllow all
+		BrowseLocalProtocols CUPS dnssd
+		BrowseAddress 192.168.0.255:631

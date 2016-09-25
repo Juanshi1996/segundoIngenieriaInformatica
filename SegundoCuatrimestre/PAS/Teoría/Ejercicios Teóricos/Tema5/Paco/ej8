@@ -1,0 +1,3 @@
+Un memory leak es un consumo incremental sin fin de memoria por parte de un proceso. ¿Cómo encontraría este tipo de procesos en un sistema con GNU/Linux?
+	Podríamos encontrarlo usando el comando top, que nos facilita la tarea puesto que nos muestra los procesos por orden de consumo,
+	mostrando el proceso que más consume el primero. Así podríamos detectarlo antes.

@@ -1,0 +1,5 @@
+¿Cómo se determina el grupo primario de un usuario? ¿Cómo lo cambiaría?
+  - Si estamos creando el usuario, con useradd/adduser -g <grupo> estableceríamos el grupo.
+  - Si queremos modificar el grupo de un usuario existente, usaríamos usermod -g <grupo> para establecerlo.
+  - Con newusers también se podría puesto que es el fichero que pasamos, establecemos los parámetros de los usuarios
+  - Usando la herramienta users-admin, podemos modificarlo de manera gráfica.

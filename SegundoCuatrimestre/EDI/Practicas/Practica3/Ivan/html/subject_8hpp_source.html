@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>Practica3ED: Fichero Fuente subject.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Practica3ED
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="modules.html"><span>Módulos</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">subject.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="subject_8hpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef SUBJECT_HPP_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define SUBJECT_HPP_</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="doubly_linked_sorted_list_8hpp.html">doublyLinkedSortedList.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="persona_8hpp.html">persona.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="generarpersona_8hpp.html">generarpersona.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceds.html">ds</a>{</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classds_1_1_subject.html">   21</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classds_1_1_subject.html">Subject</a>{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classds_1_1_subject.html#ae682d6cdb0460ee28a5e871f1d41d867">   27</a></span>&#160;    <a class="code" href="classds_1_1_doubly_linked_sorted_list.html">DoublyLinkedSortedList&lt;edi::Persona&gt;</a> <a class="code" href="classds_1_1_subject.html#ae682d6cdb0460ee28a5e871f1d41d867">_students</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classds_1_1_subject.html#afdfcbbb8110e7ceaf84df34663fddadd">createSubject</a>(<span class="keywordtype">int</span> nstudents, <span class="keywordtype">char</span>* file);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classds_1_1_subject.html#a95cc7cbf5cbc031509ed9565a5b494c6">insertStudent</a>(<span class="keyword">const</span> <a class="code" href="classedi_1_1_persona.html">edi::Persona</a> &amp;student);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classds_1_1_subject.html#afe7b3a7945e870e8ae26d7455236908c">upwardlyList</a>(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html">DoublyLinkedSortedList&lt;edi::Persona&gt;</a> studentsList);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> descendentList(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html">DoublyLinkedSortedList&lt;edi::Persona&gt;</a> studentsList);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="classds_1_1_doubly_linked_sorted_list.html">DoublyLinkedSortedList&lt;edi::Persona&gt;</a> <a class="code" href="classds_1_1_subject.html#a06aaa275b19234dd16e74c2f4775f027">extractStudents</a>(<span class="keyword">const</span> <a class="code" href="classedi_1_1_persona.html">edi::Persona</a> &amp;p1, <span class="keyword">const</span> <a class="code" href="classedi_1_1_persona.html">edi::Persona</a> &amp;p2);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classds_1_1_subject.html#ad9a6fd0afbfce694f76042d80191384c">modifyStudent</a>(<span class="keyword">const</span> <a class="code" href="classedi_1_1_persona.html">edi::Persona</a> &amp;s);</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classds_1_1_subject.html#ab810f5cd3ff74fbfd06785becc9bf65b">   81</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="classds_1_1_doubly_linked_sorted_list.html">DoublyLinkedSortedList&lt;edi::Persona&gt;</a> <a class="code" href="classds_1_1_subject.html#ab810f5cd3ff74fbfd06785becc9bf65b">getStudents</a>() { <span class="keywordflow">return</span> <a class="code" href="classds_1_1_subject.html#ae682d6cdb0460ee28a5e871f1d41d867">_students</a>; };</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">inline</span> <a class="code" href="classds_1_1_doubly_linked_sorted_list.html">DoublyLinkedSortedList&lt;edi::Persona&gt;</a>* getStudentsP() { <span class="keywordflow">return</span> &amp;<a class="code" href="classds_1_1_subject.html#ae682d6cdb0460ee28a5e871f1d41d867">_students</a>; };</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  };</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classds_1_1_subject_html"><div class="ttname"><a href="classds_1_1_subject.html">ds::Subject</a></div><div class="ttdoc">Class defining a subject. </div><div class="ttdef"><b>Definition:</b> <a href="subject_8hpp_source.html#l00021">subject.hpp:21</a></div></div>
+<div class="ttc" id="persona_8hpp_html"><div class="ttname"><a href="persona_8hpp.html">persona.hpp</a></div><div class="ttdoc">Definición de la clase Persona. </div></div>
+<div class="ttc" id="classds_1_1_subject_html_a06aaa275b19234dd16e74c2f4775f027"><div class="ttname"><a href="classds_1_1_subject.html#a06aaa275b19234dd16e74c2f4775f027">ds::Subject::extractStudents</a></div><div class="ttdeci">DoublyLinkedSortedList&lt; edi::Persona &gt; extractStudents(const edi::Persona &amp;p1, const edi::Persona &amp;p2)</div><div class="ttdoc">Extracts students between other 2 students. </div><div class="ttdef"><b>Definition:</b> <a href="subject_8cpp_source.html#l00047">subject.cpp:47</a></div></div>
+<div class="ttc" id="generarpersona_8hpp_html"><div class="ttname"><a href="generarpersona_8hpp.html">generarpersona.hpp</a></div><div class="ttdoc">Prototipos de las funciones auxiliares para generar aleatoriamente personas. </div></div>
+<div class="ttc" id="doubly_linked_sorted_list_8hpp_html"><div class="ttname"><a href="doubly_linked_sorted_list_8hpp.html">doublyLinkedSortedList.hpp</a></div></div>
+<div class="ttc" id="classds_1_1_subject_html_a95cc7cbf5cbc031509ed9565a5b494c6"><div class="ttname"><a href="classds_1_1_subject.html#a95cc7cbf5cbc031509ed9565a5b494c6">ds::Subject::insertStudent</a></div><div class="ttdeci">void insertStudent(const edi::Persona &amp;student)</div><div class="ttdoc">Insert a student in the subject. </div><div class="ttdef"><b>Definition:</b> <a href="subject_8cpp_source.html#l00017">subject.cpp:17</a></div></div>
+<div class="ttc" id="classds_1_1_subject_html_ae682d6cdb0460ee28a5e871f1d41d867"><div class="ttname"><a href="classds_1_1_subject.html#ae682d6cdb0460ee28a5e871f1d41d867">ds::Subject::_students</a></div><div class="ttdeci">DoublyLinkedSortedList&lt; edi::Persona &gt; _students</div><div class="ttdoc">A list containing the students of the subject. </div><div class="ttdef"><b>Definition:</b> <a href="subject_8hpp_source.html#l00027">subject.hpp:27</a></div></div>
+<div class="ttc" id="classedi_1_1_persona_html"><div class="ttname"><a href="classedi_1_1_persona.html">edi::Persona</a></div><div class="ttdoc">Definición de la plantilla de la clase Persona. </div><div class="ttdef"><b>Definition:</b> <a href="persona_8hpp_source.html#l00019">persona.hpp:19</a></div></div>
+<div class="ttc" id="classds_1_1_doubly_linked_sorted_list_html"><div class="ttname"><a href="classds_1_1_doubly_linked_sorted_list.html">ds::DoublyLinkedSortedList&lt; edi::Persona &gt;</a></div></div>
+<div class="ttc" id="namespaceds_html"><div class="ttname"><a href="namespaceds.html">ds</a></div><div class="ttdoc">Namespace to the Data Structures subject. </div></div>
+<div class="ttc" id="classds_1_1_subject_html_ad9a6fd0afbfce694f76042d80191384c"><div class="ttname"><a href="classds_1_1_subject.html#ad9a6fd0afbfce694f76042d80191384c">ds::Subject::modifyStudent</a></div><div class="ttdeci">void modifyStudent(const edi::Persona &amp;s)</div><div class="ttdoc">Modify a student. </div><div class="ttdef"><b>Definition:</b> <a href="subject_8cpp_source.html#l00059">subject.cpp:59</a></div></div>
+<div class="ttc" id="classds_1_1_subject_html_afdfcbbb8110e7ceaf84df34663fddadd"><div class="ttname"><a href="classds_1_1_subject.html#afdfcbbb8110e7ceaf84df34663fddadd">ds::Subject::createSubject</a></div><div class="ttdeci">void createSubject(int nstudents, char *file)</div><div class="ttdoc">Create a subject. </div><div class="ttdef"><b>Definition:</b> <a href="subject_8cpp_source.html#l00007">subject.cpp:7</a></div></div>
+<div class="ttc" id="classds_1_1_subject_html_ab810f5cd3ff74fbfd06785becc9bf65b"><div class="ttname"><a href="classds_1_1_subject.html#ab810f5cd3ff74fbfd06785becc9bf65b">ds::Subject::getStudents</a></div><div class="ttdeci">DoublyLinkedSortedList&lt; edi::Persona &gt; getStudents()</div><div class="ttdoc">Gets the students list. </div><div class="ttdef"><b>Definition:</b> <a href="subject_8hpp_source.html#l00081">subject.hpp:81</a></div></div>
+<div class="ttc" id="classds_1_1_subject_html_afe7b3a7945e870e8ae26d7455236908c"><div class="ttname"><a href="classds_1_1_subject.html#afe7b3a7945e870e8ae26d7455236908c">ds::Subject::upwardlyList</a></div><div class="ttdeci">void upwardlyList(DoublyLinkedSortedList&lt; edi::Persona &gt; studentsList)</div><div class="ttdoc">Show a upwardlyList of the students of the subject. </div><div class="ttdef"><b>Definition:</b> <a href="subject_8cpp_source.html#l00021">subject.cpp:21</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Domingo, 26 de Abril de 2015 20:23:37 para Practica3ED por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9.1
+</small></address>
+</body>
+</html>

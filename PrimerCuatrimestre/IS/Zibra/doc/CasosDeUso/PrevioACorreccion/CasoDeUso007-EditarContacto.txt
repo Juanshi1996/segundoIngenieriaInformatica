@@ -1,0 +1,20 @@
+ID: 007
+Breve descripción:
+  El Usuario edita un contacto en la agenda.
+Actores principales:
+  Usuario.
+Actores secundarios:
+  Cliente.
+Precondiciones:
+  1. El Usuario debe tener un apellido por el que buscar el contacto a editar.
+Flujo principal:
+  1. El caso de uso empieza cuando el Usuario selecciona la acción de editar Contacto.
+  2. El sistema solicita el apellido del Contacto a editar.
+    2.1. El Usuario inserta el apellido del Contacto.
+  3. El sistema pregunta al usuario que campo desea editar.
+    3.1. Tras seleccionar el campo, el usuario debe introducir el nuevo valor.
+  4. El sistema muestra un mensaje satisfactorio.
+Postcondiciones:
+
+Flujos alternativos:
+  1. Si no existe el Contacto, el sistema muestra un mensaje de error.

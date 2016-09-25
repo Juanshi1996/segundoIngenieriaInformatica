@@ -1,0 +1,12 @@
+# tty1 - getty
+#
+# This service maintains a getty on tty1 from the point the system is
+# started until it is shut down again.
+start on stopped rc RUNLEVEL=[2345]
+stop on runlevel [!2345]
+respawn
+exec /sbin/getty -8 38400 tty1
+
+¿Qué sucedería si elimina el 2 en RUNLEVEL=[2345]?
+	Sucedería que si se entra en el nivel 2 de ejecución, no se activaría el tty1.
+	Además, si se hace esto habría que eliminar el 2 también en la siguiente línea

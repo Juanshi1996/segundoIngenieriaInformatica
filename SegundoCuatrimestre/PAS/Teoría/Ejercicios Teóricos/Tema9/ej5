@@ -1,0 +1,8 @@
+¿Para que se utiliza el fichero /etc/nsswitch.conf? ¿Qué implican las opciones compat y nis?
+¿Existe alguna diferencia entre especificar “passwd: compat nis” y “passwd: nis compat”?
+
+	Sirve para configurar el servidor NSS.
+
+	compat nis: busca la información de la contraseña en passwd, group y shadow. Si no la encuentra, la busca en la base 			 de datos de nis
+	nis compat: busca la información de la contraseña en la base de datos de nis. Si no la encuentra, la busca en 
+				passwd, group, shadow

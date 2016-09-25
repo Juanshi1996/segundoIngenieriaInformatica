@@ -1,0 +1,6 @@
+¿Qué son los superbloques y para que se utilizan? ¿Se establecen a nivel de partición o de disco?
+
+	Son características del Sistema de Archivos: posición de los distintos elementos, tamaño, etc
+		-	Aquí se mantiene una serie de información común para todos los SAs y una entrada característica
+			para cada tipo de SA
+		-	

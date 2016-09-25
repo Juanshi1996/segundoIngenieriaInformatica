@@ -1,0 +1,17 @@
+ID: 001
+Breve descripción:
+  El Usuario restaura la última copia de seguridad.
+Actores principales:
+  Usuario.
+Actores secundarios:
+  Ninguno.
+Precondiciones:
+  1. Existencia de una copia de seguridad con datos.
+Flujo principal:
+  1. El caso de uso empieza cuando el usuario selecciona la acción de cargar copia de seguridad.
+  2. El sistema comprueba si existe copia de seguridad almacenada.
+  3. El sistema carga la copia y muestra un aviso satifactorio.
+Postcondiciones:
+  El Usuario puede trabajar con los datos cargados.
+Flujos alternativos:
+  Ninguno.

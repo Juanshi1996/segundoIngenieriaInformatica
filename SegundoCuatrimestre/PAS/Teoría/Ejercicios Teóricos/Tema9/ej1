@@ -1,0 +1,11 @@
+¿Qué significa stateless para un sistema de ficheros distribuido y qué efectos tiene en el bloqueo de
+archivos, en los permisos de acceso y, en general, en la seguridad?
+
+	Significa que el servidor trabaja sin mantener información del estado de cada uno de los clientes (ficheros abiertos, último fichero y posición escrita).
+	
+	Afecta de manera que se bloquean los archivos accedidos concurrentemente por varios clientes.
+
+	Como el servidor no tiene información del estado de los clientes, los permisos son innecesarios puesto que va a acceder cualquiera.
+
+	Puede haber clientes que no tengan permisos y que accedan a sitios en los cuales no deberían acceder.
+

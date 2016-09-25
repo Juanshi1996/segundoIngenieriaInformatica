@@ -1,0 +1,3 @@
+Ejercicio 6¿Qué debería hacer si un proceso consume demasiada CPU del sistema que está administrando? ¿Qué comandos debería utilizar para pararlo temporalmente, reiniciarlo e investigar más sobre el mismo?
+
+Primero conocer que está haciendo el proceso, si es correcto lo paramos con STOP, le cambiamos la preferencia (numero nice) y lo reanudamos con CONT además de hablar con el propietario del proceso.

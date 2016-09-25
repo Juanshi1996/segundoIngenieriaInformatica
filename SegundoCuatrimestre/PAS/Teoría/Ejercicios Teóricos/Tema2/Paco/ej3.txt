@@ -1,0 +1,40 @@
+Transformar los siguientes permisos simbólicos en absolutos:
+rwx r-x r-x  --> 755
+r-x r-- r--  --> 544
+rw- r-- ---  --> 640
+r-x --x --x  --> 511
+
+Transformar los siguientes permisos absolutos en simbólicos:
+1    --> --- --- --x
+644  --> rw- r-- r--
+755  --> rwx r-x r-x
+610  --> rw- --x ---
+631  --> rw- -wx --x
+
+Fijar, en modo simbólico, los permisos de arch1 en modo 754.
+chmod u+rwx,g+rx,g-w,o+r,o-wx arch1
+
+Fijar, en modo absoluto, los permisos de arch1 en modo rwx r-x --x.
+chmod 751 arch1
+
+Fijar los permisos del directorio dir1 de modo que todos lo puedan leer y entrar, pero sólo el dueño pueda modificar sus archivos:
+1) en modo simbólico --> chmod u+rwx,g+rx,g-w,o+rx,o-w dir1
+2) en modo absoluto  --> chmod 755 dir1
+
+Modificar para que el grupo también pueda modificar archivos.
+1) en modo simbólico --> chmod g+w dir1
+2) en modo absoluto  --> chmod 775 dir1
+
+Fijar en modo simbólico los permisos del archivo ejecutable
+exec.tar para que sea ejecutable por todos, legible por el
+dueño y el grupo y modificable solo por el dueño. Repetir en
+modo absoluto.
+1) en modo simbólico --> chmod u+rwx,g+rx,g-w,o+x,+-rw exec.tar
+2) en modo absoluto  --> chmod 751 exec.tar
+
+Fijar en modo absoluto los permisos del directorio dir1 de
+modo que sólo el dueño y el grupo lo puedan recorrer y leer, y
+sólo el dueño pueda grabar y borrar en él. Repetir en modo
+simbólico.
+1) en modo simbólico --> chmod u+rwx,g+rx,g-w,o+x,+-rw exec.tar
+2) en modo absoluto  --> chmod 751 exec.tar

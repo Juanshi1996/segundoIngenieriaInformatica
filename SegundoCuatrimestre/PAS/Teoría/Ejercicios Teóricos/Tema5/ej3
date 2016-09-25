@@ -1,0 +1,3 @@
+Ejercicio 3¿Qué diferencia existe entre hibernar un equipo y suspender un equipo? ¿En qué sentido influye en la memoria del sistema?
+
+Al hibernar, el estado del equipo se almacena en el disco duro y el PC se puede apagar por completo ya que el HD es una memoria no volátil. Y al suspender el estado del equipo se guarda en la memoria RAM y el equipo no se puede apagar porque la RAM si es una memoria volatil.

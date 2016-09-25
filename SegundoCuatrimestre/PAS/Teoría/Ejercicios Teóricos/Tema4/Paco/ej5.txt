@@ -1,0 +1,5 @@
+¿Es cierto que el administrador del sistema puede modificar el password de un usuario? ¿Puede
+ejecutar algún programa que le permita leerla?
+	Sí es cierto, se puede.
+	No se puede puesto que está codificada en una criptografía unidireccional puesto que no hay manera de
+	decodificarla.

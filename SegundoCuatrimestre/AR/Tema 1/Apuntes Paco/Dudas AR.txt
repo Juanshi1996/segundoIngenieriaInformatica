@@ -1,0 +1,21 @@
+﻿Diapositiva nº 6:
+  Se comparte la capacidad del enlace
+
+-----------------------------------------------------
+
+Diapositiva nº7:
+En las redes conectadas por un bus, ¿es el Tap lo que revisa el Token para permitir la transferencia de la trama
+a la computadora, o es la propia la que lo revisa?
+
+-----------------------------------------------------
+
+Diapositiva nº9:
+¿Qué son exactamente las redes SAN?
+Una SAN es una red dedicada al almacenamiento que está conectada a las redes de comunicación de una compañía.
+Además de contar con interfaces de red tradicionales, los equipos con acceso a la SAN tienen una interfaz de
+red específica que se conecta a la SAN.
+Una SAN permite compartir datos entre varios equipos de la red sin afectar el rendimiento porque el tráfico de
+ SAN está totalmente separado del tráfico de usuario. Son los servidores de aplicaciones que funcionan como una
+ interfaz entre la red de datos (generalmente un canal de fibra) y la red de usuario (por lo general Ethernet).
+
+-----------------------------------------------------

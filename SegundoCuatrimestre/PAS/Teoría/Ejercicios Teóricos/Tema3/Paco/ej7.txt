@@ -1,0 +1,5 @@
+¿Qué tendríamos que hacer si queremos que el script deliver_pizza.sh que está en el 
+HOME de root se ejecutase siempre en el nivel de ejecución 4?
+	Tendríamos que crear un enlace simbólico de deliver_pizza.sh en /etc/rc4.d/
+	Esto se podría hacer así: ln -s /root/deliver_pizza.sh /etc/rc4.d/deliver_pizza.sh
+	Para realizar esto, necesitamos los permisos necesarios.

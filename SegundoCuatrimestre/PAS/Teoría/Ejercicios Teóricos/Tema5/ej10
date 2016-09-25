@@ -1,0 +1,5 @@
+Ejercicio 10Especifica el contenido de dos entradas para el fichero crontab:– La primera debe imprimir el espacio libre en las particiones del sistema cada hora. Lainformación se volcará al fichero /var/log/reportEspacio.log– La segunda debe imprimir el listado de todos los procesos, incluyendo el nombre de usuario, a las 9:00h, a las 12:00h y a las 15:00h, los viernes. La información se volcará al fichero /var/log/reportProcesos.log
+
+* */1 * * * df > /var/log/reportEspacio.log
+
+0 9,12,15 * * 5 ps u > var/log/reportProcesos.log

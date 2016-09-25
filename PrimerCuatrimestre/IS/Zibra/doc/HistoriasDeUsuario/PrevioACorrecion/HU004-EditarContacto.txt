@@ -1,0 +1,21 @@
+004                 Editar contacto                                (ANVERSO)
+__________________________________________________________________
+
+Como usuario quiero poder editar un contacto en la agenda para
+poder modificar sus datos.
+
+
+  Estimación:
+  Prioridad:                    Dependiente de:
+
+__________________________________________________________________
+
+//////////////////////////////////////////////////////////////////
+                                                                   (REVERSO)
+__________________________________________________________________
+
+# Quiero poder editar un contacto buscandolo por apellido.
+# No debo poder editar un contacto si este no existe en la agenda.
+# Se preguntará al usuario que campo desea modificar.
+
+__________________________________________________________________

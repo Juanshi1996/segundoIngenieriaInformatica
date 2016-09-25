@@ -1,0 +1,10 @@
+Explicar cada una de las cifras que aparecen en la siguiente salida.
+	pagutierrez@TOSHIBA:~$ free
+		     							total			used			free    shared    buffers   cached
+Mem:    							1012004   924100   	87904   0       	13292    	142316
+-/+ buffers/cache:		768492   	243512 
+Swap: 								1000444  	508868    491576
+
+
+Representan la memoria total, usada, libre, compartida, usada en buffer y que sale en caché de página.
+Esta representación la hace para memoria principal (RAM), buffers/caché e intercambio.

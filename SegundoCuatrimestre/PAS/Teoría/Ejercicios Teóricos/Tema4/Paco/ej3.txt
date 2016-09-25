@@ -1,0 +1,16 @@
+Explica las diferencias que supondría utilizar las siguientes máscaras: 077, 027, 022 y 755. ¿Cómo
+modificarías los valores del umask por defecto de un usuario? ¿Y de todos los usuarios? ¿Habría
+alguna forma de forzarles a mantenerlos?
+
+Para forzar a mantenerlos se debe añadir umask *** en ~/.bashrc for Bash o /etc/profile
+
+	    CARPETAS	FICHEROS
+
+	077 rwx------	rw-------
+	027 rwxr-x---	rw-r-----
+	022 rwxr-xr-x	rw-r--r--
+	755 ----w--w-	----w--w-
+
+Abriendo ~/.bashrc del usuario y añadiendo la línea umask 022 (por ejemplo)
+
+ 

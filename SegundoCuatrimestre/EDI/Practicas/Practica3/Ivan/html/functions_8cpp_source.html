@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>Practica3ED: Fichero Fuente functions.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Practica3ED
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="modules.html"><span>Módulos</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">functions.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="functions_8hpp.html">functions.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;fstream&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="functions_8hpp.html#a715a560aedb43a49dfd8934a5af02dd0">    4</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8hpp.html#a715a560aedb43a49dfd8934a5af02dd0">createTree</a>(<a class="code" href="classds_1_1_doubly_linked_sorted_list.html">ds::DoublyLinkedSortedList&lt;edi::Persona&gt;</a> *studentList, <a class="code" href="classedi_1_1_linked_ordered_binary_tree.html">edi::LinkedOrderedBinaryTree&lt;ds::Key&gt;</a> *studentTree){</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <a class="code" href="classds_1_1_node.html">ds::Node&lt;edi::Persona&gt;</a>* aux;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  aux = studentsList-&gt;getCurrent();</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  studentsList-&gt;setCurrent(studentsList-&gt;getHead());</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordflow">while</span>(studentsList-&gt;getCurrent() != NULL){</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="classds_1_1_key.html">ds::Key</a> key;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    key.<a class="code" href="classds_1_1_key.html#adc8453021c49b015768fe5d7f40434df">setDNI</a>(((studentsList-&gt;getCurrent())-&gt;getData()).dni());</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    key.<a class="code" href="classds_1_1_key.html#a8be363d2ccca5da14f5bd7a53029f8b1">setPosition</a>(i);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    studentTree-&gt;<a class="code" href="classedi_1_1_linked_ordered_binary_tree.html#a096c936a88a6f8e71f40bbe56fdcb062">insert</a>(key);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    studentsList-&gt;setCurrent(studentsList-&gt;getCurrent()-&gt;getNext());</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    i++;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  studentsList-&gt;setCurrent(aux);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="ttc" id="classds_1_1_node_html"><div class="ttname"><a href="classds_1_1_node.html">ds::Node&lt; edi::Persona &gt;</a></div></div>
+<div class="ttc" id="classedi_1_1_linked_ordered_binary_tree_html_a096c936a88a6f8e71f40bbe56fdcb062"><div class="ttname"><a href="classedi_1_1_linked_ordered_binary_tree.html#a096c936a88a6f8e71f40bbe56fdcb062">edi::LinkedOrderedBinaryTree::insert</a></div><div class="ttdeci">virtual void insert(const T &amp;x)</div><div class="ttdoc">Insert x into the tree. Time analysis: O(h), h is the height of the tree, worst case. </div><div class="ttdef"><b>Definition:</b> <a href="edi___linked_ordered_binary_tree_8hpp_source.html#l00205">edi_LinkedOrderedBinaryTree.hpp:205</a></div></div>
+<div class="ttc" id="classedi_1_1_linked_ordered_binary_tree_html"><div class="ttname"><a href="classedi_1_1_linked_ordered_binary_tree.html">edi::LinkedOrderedBinaryTree</a></div><div class="ttdoc">Linked implementation of the ADT OrderedBinaryTree. </div><div class="ttdef"><b>Definition:</b> <a href="edi___linked_binary_tree_8hpp_source.html#l00015">edi_LinkedBinaryTree.hpp:15</a></div></div>
+<div class="ttc" id="functions_8hpp_html"><div class="ttname"><a href="functions_8hpp.html">functions.hpp</a></div></div>
+<div class="ttc" id="classds_1_1_doubly_linked_sorted_list_html"><div class="ttname"><a href="classds_1_1_doubly_linked_sorted_list.html">ds::DoublyLinkedSortedList&lt; edi::Persona &gt;</a></div></div>
+<div class="ttc" id="functions_8hpp_html_a715a560aedb43a49dfd8934a5af02dd0"><div class="ttname"><a href="functions_8hpp.html#a715a560aedb43a49dfd8934a5af02dd0">createTree</a></div><div class="ttdeci">void createTree(ds::DoublyLinkedSortedList&lt; edi::Persona &gt; *studentList, edi::LinkedOrderedBinaryTree&lt; ds::Key &gt; *studentTree)</div><div class="ttdoc">Create a tree from a DoublyLinkedSortedList. </div><div class="ttdef"><b>Definition:</b> <a href="functions_8cpp_source.html#l00004">functions.cpp:4</a></div></div>
+<div class="ttc" id="classds_1_1_key_html_adc8453021c49b015768fe5d7f40434df"><div class="ttname"><a href="classds_1_1_key.html#adc8453021c49b015768fe5d7f40434df">ds::Key::setDNI</a></div><div class="ttdeci">void setDNI(const int &amp;dni)</div><div class="ttdoc">Set DNI in the key. </div><div class="ttdef"><b>Definition:</b> <a href="key_8hpp_source.html#l00066">key.hpp:66</a></div></div>
+<div class="ttc" id="classds_1_1_key_html_a8be363d2ccca5da14f5bd7a53029f8b1"><div class="ttname"><a href="classds_1_1_key.html#a8be363d2ccca5da14f5bd7a53029f8b1">ds::Key::setPosition</a></div><div class="ttdeci">void setPosition(const int &amp;position)</div><div class="ttdoc">Set Position in the key. </div><div class="ttdef"><b>Definition:</b> <a href="key_8hpp_source.html#l00071">key.hpp:71</a></div></div>
+<div class="ttc" id="classds_1_1_key_html"><div class="ttname"><a href="classds_1_1_key.html">ds::Key</a></div><div class="ttdoc">Class defining a key. </div><div class="ttdef"><b>Definition:</b> <a href="key_8hpp_source.html#l00019">key.hpp:19</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Domingo, 26 de Abril de 2015 20:23:37 para Practica3ED por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9.1
+</small></address>
+</body>
+</html>

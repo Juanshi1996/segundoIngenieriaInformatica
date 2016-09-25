@@ -1,0 +1,4 @@
+Ejercicio 4¿Para que sirven los comandos vmstat e iostat? ¿Para que tareas los utilizaría en su labor como administrador de sistemas?
+
+vmstat muestra información sobre la memoria virtual además de procesos e iostat presenta estadísticas sobre la CPU, los dispositivos y particiones de E/S.
+

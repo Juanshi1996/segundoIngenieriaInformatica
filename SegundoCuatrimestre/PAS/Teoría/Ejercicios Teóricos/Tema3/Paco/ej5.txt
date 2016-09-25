@@ -1,0 +1,6 @@
+¿Porqué no deberíamos apagar el sistema utilizando directamente el botón de POWER del 
+ordenador? ¿Qué alternativas conoce
+	No debemos de hacerlo porque:
+		1. No se notificaría a los usuarios de que se va a apagar el equipo.
+		2. No se podrían terminar correctamente los procesos en ejecución, pudiendo provocar fallos.
+		3. Se paran los demonios.

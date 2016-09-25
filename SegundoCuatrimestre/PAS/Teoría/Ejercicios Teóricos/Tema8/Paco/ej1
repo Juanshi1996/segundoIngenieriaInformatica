@@ -1,0 +1,10 @@
+¿Cómo podrías utilizar el comando tar para crear una copia incremental de su directorio home con
+dos niveles (0 y 1)?
+	Para hacer una copia de seguridad de nivel 0:
+		tar -czvf backup.0.tgz -g backup.snap /home
+	Para hacer una copia de seguridad de nivel 0:
+		tar -czvf backup.1.tgz -g backup.snap /home
+
+
+	O bien
+		tar -czvf -N $(stat /home/Escritorio backup.0.tgz | grep Modificación | sed -r -e 's/M.*: //' | sed -r -e 's/\.[0-9].*//') backup.1.tgz /home

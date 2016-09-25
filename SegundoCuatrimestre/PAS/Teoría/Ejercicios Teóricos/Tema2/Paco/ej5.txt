@@ -1,0 +1,32 @@
+Ver salida del comando ls -l pag 34 pdf teoría2 y responder:
+
+Sea la siguiente salida del comando ls -l (suponemos que
+pagutierrez pertenece a staff):
+
+Indicar, si los hay:
+1) directorios públicos (todo el mundo puede entrar, listar y borrar archivos);
+   step
+   borrador
+2) archivos que tienen enlaces hard o físicos;
+   boor.exe
+   mysql-doc
+   ver.exe
+   ver
+3) archivos ejecutables por el usuario pagutierrez;
+   pph3
+   ver
+4) directorios navegables por todo el mundo;
+   step
+   Office51
+   borrador
+   cdir
+   lit
+5) directorios donde miembros del grupo staff puede borrar archivos;
+   step
+   Office51
+   bajados
+   borrador
+6) archivos que son enlaces simbólicos.
+   Ninguno
+7) archivos ejecutables que adquieren permisos de usuario root.
+   pph3

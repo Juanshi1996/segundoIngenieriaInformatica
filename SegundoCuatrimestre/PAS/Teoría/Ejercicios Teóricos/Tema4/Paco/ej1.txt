@@ -1,0 +1,8 @@
+Comenta distintas formas de imposibilitar el acceso al sistema por parte de un usuario.
+  - Cambiarle la contraseña sin que lo sepa.
+  - Si en la información de envejecimiento se le añade una fecha de expiración y esta se cumple.
+    De este modo, se imposibilita el acceso a ese usuario durante x tiempo.
+  - Asignar /bin/false o /sbin/nologin como intérprete de órdenes
+  - Establecer como shell un fichero ejecutable, que cuando el usuario intente entrar al sistema, este se ejecute
+    y el usuario salga del sistema (no llega a hacer login)
+  

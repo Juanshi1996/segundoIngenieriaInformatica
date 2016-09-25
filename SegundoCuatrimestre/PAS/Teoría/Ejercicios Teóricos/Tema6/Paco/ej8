@@ -1,0 +1,12 @@
+Explique los conceptos de bloque, i-nodo y v-nodo. ¿Cómo implementaría un enlace físico
+utilizando una tabla tipo FAT?
+	- Bloque: agrupación lógica de sectores físicos del disco, la cual supone la unidad de transferencia mínima usa el
+			  SA.
+			  El tamaño de bloque puede ser:
+			  	- Pequeño: + nº operaciones E/S para acceder al archivo. Menor fragmentación.
+			  	- Grande: - nº operaciones E/S para acceder al archivo. Mayor fragmentación.
+	- inodo: estructura de datos propia de los SAs. Generalmente los usan SO de tipo UNIX.
+			 El inodo contiene características tales como permisos, fechas, ubicación...de un archivo regular, directorio o cualquier otro objeto de un sistema de ficheros. El nombre del archivo NO.
+	- vnodo: 
+
+	- Implementación enlace físico en tabla FAT:

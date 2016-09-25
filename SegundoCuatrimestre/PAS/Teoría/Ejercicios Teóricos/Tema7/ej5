@@ -1,0 +1,12 @@
+A partir de la siguiente salida, diagnostique la causa por la que no están imprimiéndose los trabajos
+en este equipo:
+pagutierrez@PEDROLaptop:~$ ps ax | grep cupsd
+	4084 pts/0	S+	0:00 grep --color=auto cupsd
+¿Y si en el fichero /etc/cups/cups.conf encontramos lo siguiente?
+...
+Listen www.google.es
+...
+	El primer fallo que vemos es que en la primera salida, la impresora está en ejecución pero está durmiendo (S+).
+	Por lo tanto, recibe los trabajos y los almacena en la cola de impresión pero no los imprime. Para que los imprima, habría que mandarle a la impresora el comando 'cupsenable impresora'.
+
+	El segundo fallo, en el fichero /etc/cups/cups.conf lo encontramos en que no podemos poner como servidor un servidor externo. Tenemos que poner un servidor local que se encuentre en el puerto 631.

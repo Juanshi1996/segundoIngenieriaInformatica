@@ -1,0 +1,24 @@
+001                 Insertar contacto                              (ANVERSO)
+__________________________________________________________________
+
+Como usuario quiero poder insertar un contacto en la agenda,
+para poder almacenar su nombre, apellidos, DNI, teléfonos
+teléfonos, dir. postales, redes sociales y una nota.
+
+
+  Estimación:
+  Prioridad:                    Dependiente de:
+
+__________________________________________________________________
+
+//////////////////////////////////////////////////////////////////
+                                                                   (REVERSO)
+__________________________________________________________________
+
+# Quiero poder introducir un contacto rellenando el formulario de contacto.
+# No debo poder dar de alta un contacto si ya existe otro igual con el
+  mismo nombre en la agenda.
+# Cuando termine de rellenar el formulario debe registrarse el contacto
+  en la agenda.
+
+__________________________________________________________________

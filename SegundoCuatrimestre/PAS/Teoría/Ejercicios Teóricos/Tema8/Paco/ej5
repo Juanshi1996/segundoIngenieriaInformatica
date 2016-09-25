@@ -1,0 +1,5 @@
+Comenta al menos tres directrices generales a tener en cuenta cuando se realizan copias de
+seguridad de los archivos.
+	La copia de seguridad tiene que estar fuera del sistema
+	No esperar a que ocurra un problema para verificar las copias.
+	Tener en cuenta el tiempo de vida de los dispositivos.

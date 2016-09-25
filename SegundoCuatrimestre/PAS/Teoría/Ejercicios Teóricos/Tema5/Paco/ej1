@@ -1,0 +1,2 @@
+¿Cómo podríamos listar el PID de todos los procesos en ejecución utilizando ls?
+	Nos vamos al directorio /proc y hacemos ls. Las carpetas cuyo nombre sea una cifra númerica es un proceso

@@ -1,0 +1,3 @@
+¿Por qué el fichero /etc/passwd necesita dos mapas NIS distintos (passwd.byname y
+passwd.byuid)?
+	Un mapa es para el acceso por nombre y el otro por el acceso por UID. Con estos mapas NIS distintos controlamos el acceso al servidor a través de los nombre y UID de los clientes.

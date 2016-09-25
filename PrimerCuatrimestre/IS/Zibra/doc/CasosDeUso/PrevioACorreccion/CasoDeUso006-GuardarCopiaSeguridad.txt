@@ -1,0 +1,16 @@
+ID: 006
+Breve descripción:
+  El Usuario guarda copia de seguridad de la agenda.
+Actores principales:
+  Usuario.
+Actores secundarios:
+  Ninguno.
+Precondiciones:
+  1. La agenda debe tener contactos.
+Flujo principal:
+  1. El caso de uso empieza cuando el Usuario selecciona la acción de guardar copia de seguridad.
+  2. El sistema almacena la copia de seguridad y muestra un mensaje satisfactorio.
+Postcondiciones:
+
+Flujos alternativos:
+  1. Si no hay contactos en la agenda, el sistema muestra un mensaje de error.

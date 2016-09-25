@@ -1,0 +1,5 @@
+Comente el sentido que tienen las políticas de actualización write-through para bloques de i-nodos y
+v-nodos y delayed-write para bloques de datos.
+	Al actualizar los bloques de i-nodos y v-nodos con políticas write-through conseguimos que la información importante acerca de los archivos no se quede almacenada en caché y directamente pase al disco duro, con lo que conseguimos salvar con mayor probabilidad la información en caso de fallo en el sistema.
+
+	Los bloques de datos no son tan necesarios de guardar en disco como los i-nodos y v-nodos, cuya pérdida de información puede causar fallos. Por eso se usa la política delayed-write, que pasa de caché a disco duro cada cierto período de tiempo.

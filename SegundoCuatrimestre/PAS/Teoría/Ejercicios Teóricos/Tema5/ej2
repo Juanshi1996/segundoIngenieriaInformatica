@@ -1,0 +1,8 @@
+Ejercicio 2Explicar cada una de las cifras que aparecen en la siguiente salida.pagutierrez@TOSHIBA:~$ free             total       used       free     shared    buffers     cachedMem:       1012004     924100      87904          0      13292     142316-/+ buffers/cache:     768492     243512Swap:      1000444     508868     491576
+
+TOTAL -> Total de memoria
+USED -> Cantidad de memoria usada
+FREE -> Cantidad de memoria libre
+SHARED -> Memoria compartida
+BUFFERS ->
+CACHED -> En cache

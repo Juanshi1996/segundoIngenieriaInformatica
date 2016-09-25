@@ -1,0 +1,4 @@
+¿Para que sirven los comandos df y du? Ponga ejemplos de situaciones en que debería utilizar
+dichos comandos.
+	df: muestra la capacidad, el espacio libre y el punto de montaje de cada sistema de ficheros del equipo
+	du: muestra el espacio usado por cada subdirectorio del directorio actual.

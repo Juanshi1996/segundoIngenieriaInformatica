@@ -1,0 +1,4 @@
+Explique porque no produce ninguna salida el siguiente listado:
+pedroa@pagutierrezLaptop:~$ ls /etc/skel/
+pedroa@pagutierrezLaptop:~$
+¿Que ficheros hubiese esperado obtener?

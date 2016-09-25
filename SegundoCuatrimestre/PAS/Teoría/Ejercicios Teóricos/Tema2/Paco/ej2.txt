@@ -1,0 +1,4 @@
+enlace hacia un archivo en el mismo directorio. --> físico y simbólico.
+enlace hacia un archivo en otro sistema de archivos. --> simbólico.
+enlace hacia un directorio en el mismo sistema de archivos. --> simbólico.
+enlace hacia un directorio en otro sistema de archivos. --> simbólico.
