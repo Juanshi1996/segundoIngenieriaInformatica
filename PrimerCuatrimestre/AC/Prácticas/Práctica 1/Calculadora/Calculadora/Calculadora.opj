@@ -1,0 +1,106 @@
+(ExpressProject "Calculadora"
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File "c:\prg16\orcadwin\express\library\ttl.olb"
+        (Type "Schematic Library")))
+    (File ".\calc.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (NoModify)
+    (File ".\reg_ci.vhd"
+      (Type "VHDL Source"))
+    (File ".\acumulador.vhd"
+      (Type "VHDL Source"))
+    (File ".\reg_bus.vhd"
+      (Type "VHDL Source")))
+  (Folder "Outputs"
+    (File ".\calc.drc"
+      (Type "Report"))
+    (File ""
+      (Type "Report"))
+    (File ".\calc.vhd"
+      (Type "Report")))
+  (Folder "Referenced Projects")
+  (Folder "Simulation Resources"
+    (Folder "In Design"
+      (File ".\indesign\calc.vhd"
+        (Type "VHDL Netlist"))
+      (File ".\reg_ci.vhd"
+        (Type "VHDL Source"))
+      (File ".\acumulador.vhd"
+        (Type "VHDL Source"))
+      (File ".\reg_bus.vhd"
+        (Type "VHDL Source"))
+      (File ".\stimulus.stm"
+        (Type "Simulate Stimulus"))
+      (File "c:\prg16\orcadwin\express\library\orcomp.vhd"
+        (Type "VHDL SimModel"))
+      (File "c:\prg16\orcadwin\express\library\ls.vhd"
+        (Type "VHDL SimModel"))
+      (File ".\indesign\stimulus.stm"
+        (Type "Simulate Stimulus"))
+      (Options
+        (AssertBeep 1)
+        (AssertLog 1)
+        (AssertMsg 1)
+        (AssertStop 1)
+        (BreakBeep 1)
+        (BreakLog 1)
+        (BreakMessage 1)
+        (BreakStop 1)
+        (FileOpen
+           "C:\Documents and Settings\jose.JURELICO2\Mis documentos\docencia\ac3is\Pract4")
+        (InstructionStep 1)
+        (InteractiveUpdate 0)
+        (ITCEnabled 0)
+        (ListDisplayTop 1)
+        (LogTimeStamp 1)
+        (MiscOptLastPage 0)
+        (PlaAddToProject 1)
+        (PlaClockToOutput 0)
+        (PlaCombinational 0)
+        (PlaResolution -1)
+        (PlaSetupTime 0)
+        (PlaSpeedGrade 15)
+        (PlaTriStateEnable 0)
+        (Radix 0)
+        (RunResolution 2)
+        (RunTime 10000)
+        (SDFTiming 1)
+        (TimeCursorSnap 0)
+        (TimingBeep 0)
+        (TimingLog 1)
+        (TimingMsg 0)
+        (TimingStop 0)
+        (VHDLStandard 1)
+        (WaveDisplayTop 1)))
+    (Folder "Compiled"
+      (File "C:\ORCADWIN\EXPRESS\LIBRARY\LS.VHD"
+        (Type "VHDL SimModel"))
+      (File "C:\ORCADWIN\EXPRESS\LIBRARY\ORCOMP.VHD"
+        (Type "VHDL SimModel"))
+      (File ".\indesign\calc.vhd"
+        (Type "VHDL Netlist"))
+      (File ".\reg_ci.vhd"
+        (Type "VHDL Source"))
+      (File ".\acumulador.vhd"
+        (Type "VHDL Source"))
+      (File ".\reg_bus.vhd"
+        (Type "VHDL Source")))
+    (Folder "Timed"
+      (File "C:\ORCADWIN\EXPRESS\LIBRARY\LS.VHD"
+        (Type "VHDL SimModel"))
+      (File "C:\ORCADWIN\EXPRESS\LIBRARY\ORCOMP.VHD"
+        (Type "VHDL SimModel"))
+      (File ".\indesign\calc.vhd"
+        (Type "VHDL Netlist"))
+      (File ".\reg_ci.vhd"
+        (Type "VHDL Source"))
+      (File ".\acumulador.vhd"
+        (Type "VHDL Source"))
+      (File ".\reg_bus.vhd"
+        (Type "VHDL Source")))
+    (DefaultFolder "In Design")
+    (LastModified "Sun Oct 16 23:51:37 2016")))

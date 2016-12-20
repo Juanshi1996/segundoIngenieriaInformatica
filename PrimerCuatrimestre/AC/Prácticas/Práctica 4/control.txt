@@ -1,0 +1,49 @@
+﻿            FETCH
+T0          PC->MAR                       SR+1->SR
+T1          PC+1->PC; M->GPR              SR+1->SR
+T2          GPR(OP)->OP; GPR(AD)->MAR     SR+1->SR
+
+            HALT
+Q0*T3
+
+            LDA m
+Q1*T3       M->GPR; 0->ACC                SR+1->SR
+Q1*T4       GPR+ACC->ACC                  0->SR
+
+            LDQ m
+Q2*T3       M->QR                         0->SR
+
+            JMP_PC m
+Q3*T3       0->ACC                        SR+1->SR
+Q3*T4       GPR+ACC->ACC                  SR+1->SR
+Q3*T5       PC->GPR                       SR+1->SR
+Q3*T6       GPR+ACC->ACC                  SR+1->SR
+Q3*T7       ACC->GPR                      SR+1->SR
+Q3*T8       GPR->PC                       0->SR
+
+            DJNZ m
+Q4*T3       ACC'+1->ACC                   SR+1->SR
+Q4*T4       ACC+1->ACC                    SR+1->SR
+Q4*T5       ACC'+1->ACC                   SR+1->SR
+Q4*T6*Zac'  GPR->PC                       0->SR
+Q4*T6*Zac                                 0->SR
+
+            SEV m
+Q5*T3       M->GPR; 0->ACC                SR+1->SR
+Q5*T4       GPR+ACC->ACC                  SR+1->SR
+Q5*T5       ROR F ACC QR                  SR+1->SR
+Q5*T6*F'    PC+1->PC                      0->SR
+Q5*T6*F                                   0->SR
+
+            PUSH_N
+Q6*T3       SP-1->SP                      SR+1->SR
+Q6*T4       SP->MAR; 0->QR                SR+1->SR
+Q6*T5*N'                                  SR+1->SR
+Q6*T5*N     1->QN                         SR+1->SR
+Q6*T6       QR->M                         0->SR
+
+            POP_N
+Q7*T3       SP->MAR; 0->N                 SR+1->SR
+Q7*T4       SP+1->SP; M->GPR              SR+1->SR
+Q7*T5*Zb'   1->N                          0->SR
+Q7*T5*Zb                                  0->SR

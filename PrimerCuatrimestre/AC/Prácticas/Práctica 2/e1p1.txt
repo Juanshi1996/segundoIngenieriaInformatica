@@ -1,0 +1,13 @@
+#Ejercicio 1 practica 1
+7 3
+8 2
+@
+0
+@
+CRA
+ADD 8
+CTA
+ITA
+ADD 7
+STA 9
+HALT
