@@ -6,3 +6,4 @@ DJNZ true 4 q4
 SEV true 4 q5
 PUSH_N false 4 q6
 POP_N false 3 q7
+MULT true 8 q8

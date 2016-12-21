@@ -47,3 +47,17 @@ Q7*T3       SP->MAR; 0->N                 SR+1->SR
 Q7*T4       SP+1->SP; M->GPR              SR+1->SR
 Q7*T5*Zb'   1->N                          0->SR
 Q7*T5*Zb                                  0->SR
+
+	    MULT m
+Q8*T3	    M->GPR; LOAD SC; 0->A	  SR+1->SR
+Q8*T4	    0->F			  SR+1->SR
+Q8*T5	    Qs@Bs->As			  SR+1->SR
+Q8*T6	    Qs@Bs->Qs			  SR+1->SR
+Q8*T7	    SC-1->SC			  SR+1->SR
+Q8*T8*Qn'				  SR+1->SR
+Q8*T8*Qn    A+B->EA			  SR+1->SR
+Q8*T9	    SHR FAQ			  SR+1->SR
+Q8*T10*Zsc' 				  7->SR
+Q8*T10*Zsc				  0->SR
+
+
