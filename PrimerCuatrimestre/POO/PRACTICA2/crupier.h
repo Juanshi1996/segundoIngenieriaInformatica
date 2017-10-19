@@ -1,5 +1,5 @@
 #ifndef _CRUPIER_H
-#define _CRUPRIER_H
+#define _CRUPIER_H //TENIAS PUESTO CRUPRIER ENTONCES SALTARIA UN ERROR EN TAL CASO xD
 
 #include <string>
 #include "persona.h"
